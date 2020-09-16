@@ -62,7 +62,7 @@ class HomeController extends Controller
             $products = $allProducts->load('mainImage')->random(8)->shuffle();
         }
 
-        return view('home')
+        return view('home1')
             ->with('heroProduct', $heroProduct)
             ->with('products', $products)
             ->with('page', $page)
