@@ -14,7 +14,6 @@
 <!-- Preloader Start -->
 
 <header>
-
     <!-- Header Start -->
     <div class="header-area  ">
         <div class="main-header header-sticky " style="background-color: black;">
@@ -44,23 +43,19 @@
                                 </li>
                                 <li><a href="{{ route('contact') }}">Contact Us </a></li>
                                 </li>
-                                <li><a href="{{ route('contact') }}">Login </a></li>
 
-                                <li><a href="#">Register</a>
-                                    <ul class="submenu ">
-                                        <li><a href="login.html">Login</a></li>
-                                        <li><a href="cart.html">Cart</a></li>
 
-                                        <li><a href="confirmation.html">Confirmation</a></li>
-                                        <li><a href="{{ route('contact') }}">Product Checkout</a></li>
-                                    </ul>
-                                </li>
+                                @auth('customer')
+                                    <li> <a href="{{ route('account.dashboard') }}"><span class="flaticon-user"style="color: red;"></span></a></li>
 
+
+                                    @else
+                                    <li><a href="{{ route('login') }}">Login </a></li>
+                                    <li><a href="{{ route('register') }}">Register</a></li>
+                                @endauth
 
 
 
-
-                                <li> <a href="login.html"><span class="flaticon-user"style="color: red;"></span></a></li>
                                 <li><a href="cart.html"><span class="flaticon-shopping-cart"style="color: red;"></span></a> </li>
 
 
