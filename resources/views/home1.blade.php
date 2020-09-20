@@ -55,41 +55,9 @@
     </div>
     <!-- slider Area End-->
     <!-- ? New Product Start -->
-    <section class="new-product-area section-padding30">
-        <div class="container">
-            <!-- Section tittle -->
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="section-tittle mb-70 text-center">
-                        <h2>High Rated</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                @foreach($products as $product)
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-new-pro mb-30 text-center">
-                        <div class="product-img">
-                            <img src="{{ $product->main_image_url }}" alt="">
-                        </div>
-                        <div class="product-caption">
-                            <h3><a href="product_details.html">{{$product->name}}</a></h3>
-                            <span>
-                                {{ session()->get('default_currency')->symbol . number_format($product->price, 2) }}
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
-    <!--  New Product End -->
-    <!--? Gallery Area Start -->
 
-    <!-- Gallery Area End -->
     <!--? Popular Items Start -->
-    <div class="popular-items section-padding15">
+    <div class="popular-items section-padding30">
         <div class="container">
             <!-- Section tittle -->
             <div class="row justify-content-center">
@@ -101,57 +69,36 @@
                 </div>
             </div>
             <div class="row">
+                @foreach($products as $product)
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                     <div class="single-popular-items mb-50 text-center">
                         <div class="popular-img">
-                            <img src="assets/img/gallery/product1.jpg" alt="">
+                            <img src="{{ $product->main_image_url }}" alt="">
                             <div class="img-cap">
-                                <span>Add to cart</span>
+                                <span>
+                                    <form  method="post" action="{{ route('add.to.cart') }}">
+                                    @csrf
+                                    <input type="hidden" name="slug" value="{{ $product->slug }}" />
+                                    <input type="hidden" name="qty" value="1" />
+                                    <button type="submit" style="background-color: transparent; border: none;">
+                                        Add to cart
+                                    </button>
+                                    </form>
+                                </span>
                             </div>
                             <div class="favorit-items">
                                 <span class="flaticon-heart"></span>
                             </div>
                         </div>
                         <div class="popular-caption">
-                            <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                            <span>$ 45,743</span>
+                            <h3><a href="{{ route('product.show', $product->slug) }}">{{$product->name}}</a></h3>
+                            <span>
+                                {{ session()->get('default_currency')->symbol . number_format($product->price, 2) }}
+                            </span>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-popular-items mb-50 text-center">
-                        <div class="popular-img">
-                            <img src="assets/img/gallery/product2.jpg" alt="">
-                            <div class="img-cap">
-                                <span>Add to cart</span>
-                            </div>
-                            <div class="favorit-items">
-                                <span class="flaticon-heart"></span>
-                            </div>
-                        </div>
-                        <div class="popular-caption">
-                            <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                            <span>$ 45,743</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-popular-items mb-50 text-center">
-                        <div class="popular-img">
-                            <img src="assets/img/gallery/product3.jpg" alt="">
-                            <div class="img-cap">
-                                <span>Add to cart</span>
-                            </div>
-                            <div class="favorit-items">
-                                <span class="flaticon-heart"></span>
-                            </div>
-                        </div>
-                        <div class="popular-caption">
-                            <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                            <span>$ 45,743</span>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
 
             </div>
 

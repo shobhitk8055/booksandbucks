@@ -36,9 +36,9 @@ class ProductController extends Controller
     {
         $product = $this->productRepository->findBySlug($slug);
         $reviews = $this->productReviewRepository->getAllReviewsByProductId($product->id);
-        $product->images;
+        $images = $product->images;
 
-        return view('product.show')
-            ->with(compact('product', 'reviews'));
+        return view('product.show1')
+            ->with(compact('product', 'reviews', 'images'));
     }
 }

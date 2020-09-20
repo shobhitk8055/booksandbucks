@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use AvoRed\Framework\Database\Contracts\PageModelInterface;
 use AvoRed\Framework\Database\Contracts\ProductModelInterface;
 use AvoRed\Wishlist\Database\Contracts\WishlistModelInterface;
+use Illuminate\Support\Facades\Hash;
 
 class HomeController extends Controller
 {

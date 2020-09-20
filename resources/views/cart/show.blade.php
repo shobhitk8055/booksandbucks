@@ -6,7 +6,7 @@
     <ol class="list-reset flex text-gray-700">
        <li>
             <a class="text-gray-700" href="{{ route('home') }}" title="home">
-                {{ __('avored.home') }} >> 
+                {{ __('avored.home') }} >>
             </a>
         </li>
        <li> <span class="">{{ __('avored.cart') }}</span></li>

@@ -37,8 +37,8 @@
                                 <li><a href="{{ route('about') }}">About</a></li>
                                 <li class="hot"><a href="#">Categories</a>
                                     <ul class="submenu ">
-                                        <li><a href="shop.html"> Books list</a></li>
-                                        <li><a href="product_details.html"> Books Details</a></li>
+                                        <li><a href="shop.html">Category 1</a></li>
+                                        <li><a href="product_details.html">Category 2</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="{{ route('contact') }}">Contact Us </a></li>
@@ -56,7 +56,7 @@
 
 
 
-                                <li><a href="cart.html"><span class="flaticon-shopping-cart"style="color: red;"></span></a> </li>
+                                <li><a href="{{ route('cart.show') }}"><span class="flaticon-shopping-cart"style="color: red;"></span></a> </li>
 
 
                             </ul>
