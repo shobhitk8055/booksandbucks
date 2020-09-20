@@ -9,7 +9,6 @@
 
 @endsection
 
-
 @section('content')
   <div class="container m-auto">
       @if (session('type') === 'success')

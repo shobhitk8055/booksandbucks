@@ -1,112 +1,63 @@
-@extends('layouts.app')
-
-@section('breadcrumb')
-<div>
-    <div>
-      <a href="{{ route('home') }}" title="home">
-        {{ __('Home') }}
-      </a>
-    </div>
-    <div>
-        {{ __('Login') }}
-    </div>
-</div>
-@endsection
+@extends('layouts.app1')
 
 @section('content')
-    <div class="flex items-center justify-center bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-lg w-full bg-white rounded-md shadow-md p-6">
-            <div>
-                <a href="https://avored.com" target="_blank">
-                    <img class="mx-auto h-12 w-auto" 
-                        src="{{ asset('/images/logo.svg') }}" 
-                        alt="AvoRed Ecommerce" />
-                </a>
-                <h2 class="mt-6 text-center text-3xl text-gray-400 font-extrabold text-gray-900">
-                    {{ __('avored.pages.register.title') }}
-                </h2>
+
+    <main>
+        <!--================login_part Area =================-->
+        <section class="login_part pt-5 mt-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="login_part_text text-center">
+                            <div class="login_part_text_iner">
+                                <h2>Already a member?</h2>
+                                <p>There are advances being made in science and technology
+                                    everyday, and a good example of this is the</p>
+                                <a href="{{ route('login') }}" class="btn_3">Sign in</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="login_part_form">
+                            <div class="login_part_form_iner">
+                                <h3>New to us ! <br>
+                                    Please Sign up now</h3>
+                                <form class="row contact_form" action="{{ route('register') }}" method="post" novalidate="novalidate">
+                                    <div class="col-md-12 form-group p_star">
+                                        <input type="text" class="form-control" id="first_name" error-text="{{ $errors->first('first_name') }}" name="first_name" value=""
+                                               placeholder="First Name">
+                                    </div>
+                                    <div class="col-md-12 form-group p_star">
+                                        <input type="text" class="form-control" id="last_name" error-text="{{ $errors->first('last_name') }}" name="last_name" value=""
+                                               placeholder="Last Name">
+                                    </div>
+
+                                    <div class="col-md-12 form-group p_star">
+                                        <input type="email" class="form-control" id="email" error-text="{{ $errors->first('email') }}" name="email" value=""
+                                               placeholder="Email">
+                                    </div>
+                                    @csrf()
+
+                                    <div class="col-md-12 form-group p_star">
+                                        <input type="password" class="form-control" id="password" error-text="{{ $errors->first('password') }}" name="password" value=""
+                                               placeholder="Password">
+                                    </div>
+                                    <div class="col-md-12 form-group p_star">
+                                        <input type="password" class="form-control" id="password" error-text="{{ $errors->first('password_confirmation') }}" name="password_confirmation" value=""
+                                               placeholder="Confirm Password">
+                                    </div>
+                                    <div class="col-md-12 form-group">
+                                        <button type="submit" value="submit" class="btn_3">
+                                            log in
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <form class="mt-8" action="{{ route('register') }}" method="POST">
-                @csrf()
-                <div class="rounded-md shadow-sm">
-                    <div class="flex items-center">
-                        <div class="mt-3 w-1/2">
-                            <avored-input
-                                label-text="{{ __('avored.fields.first_name') }}"
-                                label-class="w-full block"
-                                input-class="w-full block"
-                                field-name="first_name"
-                                input-type="first_name"
-                                error-text="{{ $errors->first('first_name') }}"
-                            ></avored-input>
-                        </div>
-                        <div class="mt-3 w-1/2 ml-3">
-                            <avored-input
-                                label-text="{{ __('avored.fields.last_name') }}"
-                                label-class="w-full block"
-                                input-class="w-full block"
-                                field-name="last_name"
-                                input-type="last_name"
-                                error-text="{{ $errors->first('last_name') }}"
-                            ></avored-input>
-                        </div>
-                    </div>
-                    <div class="mt-3">
-                        <avored-input
-                            label-text="{{ __('avored.fields.email') }}"
-                            label-class="w-full block"
-                            input-class="w-full block"
-                            field-name="email"
-                            input-type="email"
-                            error-text="{{ $errors->first('email') }}"
-                        ></avored-input>
-                    </div>
-
-                    <div class="flex items-center">
-                    
-                        <div class="mt-3 w-1/2">
-                            <avored-input
-                                label-text="{{ __('avored.fields.password') }}"
-                                label-class="w-full block"
-                                input-class="w-full block"
-                                field-name="password"
-                                input-type="password"
-                                error-text="{{ $errors->first('password') }}"
-                            ></avored-input>
-                        </div>
-                        <div class="mt-3 w-1/2 m-3">
-                            <avored-input
-                                label-text="{{ __('avored.fields.password_confirmation') }}"
-                                label-class="w-full block"
-                                input-class="w-full block"
-                                field-name="password_confirmation"
-                                input-type="password"
-                                error-text="{{ $errors->first('password_confirmation') }}"
-                            ></avored-input>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-6">
-                    <button 
-                        type="submit" 
-                        class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-500 focus:outline-none focus:border-red-700 focus:shadow-outline-red active:bg-red-700"
-                    >
-                    <span class="absolute left-0 inset-y pl-3">
-                        <svg 
-                            class="h-5 w-5 text-red-500 group-hover:text-red-400" 
-                            fill="currentColor" 
-                            viewBox="0 0 20 20"
-                        >
-                            <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" 
-                                clip-rule="evenodd"
-                            />
-                        </svg>
-                    </span>
-                        {{ __('avored.btn.register') }}
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
+        </section>
+        <!--================login_part end =================-->
+    </main>
 @endsection
