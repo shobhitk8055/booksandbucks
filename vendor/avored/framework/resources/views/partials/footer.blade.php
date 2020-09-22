@@ -1,10 +1,10 @@
 <footer class="text-gray-700 border-t body-font">
     <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
         <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-            <img src="{{ asset('vendor/avored/images/logo_only.svg') }}" class="h-10 w-10" />
+            <img src="{{ asset('vendor/avored/images/logo_only.png') }}" class="h-10 w-10" />
         </a>
-        <p class="text-sm text-gray-500 sm:pl-4 sm:py-2 sm:mt-0 mt-4">© {{ date('Y') }} AvoRed —
-           <a href="https://avored.com" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">AvoRed</a>
+        <p class="text-sm text-gray-500 sm:pl-4 sm:py-2 sm:mt-0 mt-4">© {{ date('Y') }} —
+           <a href="https://avored.com" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">Books and Bucks</a>
         </p>
         <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
             <a href="https://www.facebook.com/avored" target="_blank" class="text-gray-500">

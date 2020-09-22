@@ -164,7 +164,7 @@ class ProductController
     public function update(ProductRequest $request, Product $product)
     {
         $product->update($request->all());
-//        $this->saveProductCategory($product, $request);
+        $this->saveProductCategory($product, $request);
         $this->saveProductImages($product, $request);
 //        $this->saveProductProperty($product, $request);
 
@@ -301,10 +301,14 @@ class ProductController
      */
     private function saveProductCategory(Product $product, $request)
     {
-        if ($request->get('category') !== null && count($request->get('category')) > 0) {
+        if ($request->get('category') !== null){
             $product->categories()->sync($request->get('category'));
         }
+//        if ($request->get('category') !== null && count($request->get('category')) > 0) {
+//            $product->categories()->sync($request->get('category'));
+//        }
     }
+
 
     /**
      * Save Product Property.
