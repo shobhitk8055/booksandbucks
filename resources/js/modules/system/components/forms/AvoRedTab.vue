@@ -19,7 +19,6 @@
             isVisible: true,
         }),
         computed: {
-           
         },
     };
 </script>
