@@ -81,7 +81,7 @@ function marshalUriFromSapi(array $server, array $headers) : Uri
         * @return array Array of two items, host and port, in that order (can be
         *     passed to a list() operation).
         */
-        $marshalIpv6HostAndPort = function (array $server, ?int $port) : array {
+        $marshalIpv6HostAndPort = function (array $server, $port) : array {
             $host = '[' . $server['SERVER_ADDR'] . ']';
             $port = $port ?: 80;
             if ($port . ']' === substr($host, strrpos($host, ':') + 1)) {
@@ -191,7 +191,7 @@ function marshalUriFromSapi(array $server, array $headers) : Uri
     $uri = $uri->withScheme($scheme);
 
     // Set the host
-    [$host, $port] = $marshalHostAndPort($headers, $server);
+    list($host, $port) = $marshalHostAndPort($headers, $server);
     if (! empty($host)) {
         $uri = $uri->withHost($host);
         if (! empty($port)) {
@@ -214,7 +214,7 @@ function marshalUriFromSapi(array $server, array $headers) : Uri
     // URI fragment
     $fragment = '';
     if (strpos($path, '#') !== false) {
-        [$path, $fragment] = explode('#', $path, 2);
+        list($path, $fragment) = explode('#', $path, 2);
     }
 
     return $uri
