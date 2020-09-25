@@ -2,6 +2,7 @@
 
 namespace AvoRed\Framework\Catalog\Controllers;
 
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
@@ -99,6 +100,15 @@ class ProductController
      * Show Dashboard of an AvoRed Admin.
      * @return \Illuminate\View\View
      */
+
+    public function b(Request $request){
+        $image = $request->file('i');
+        $name = $image->getClientOriginalName();
+        $path = $image->storeAs('uploads/catalog',$name,'avored');
+        rename('../storage/app/public/'.$path,'storage/'.$path);
+//        Storage::move($path,$name);
+    }
+
     public function index()
     {
         $products = $this->productRepository->getAllWithoutVaiation();
@@ -214,16 +224,18 @@ class ProductController
     public function upload(ProductImageRequest $request, Product $product)
     {
         $image = $request->file('files');
-        $dbPath = $image->store('uploads/catalog/'.$product->id, 'avored');
+        $name = $image->getClientOriginalName();
+        $dbPath = $image->storeAs('uploads/catalog/'.$product->id,$name, 'avored');
 
         if ($product->images === null || $product->images->count() === 0) {
             $imageModel = $product->images()->create(
                 ['path' => $dbPath,
-                'is_main_image' => 1, ]
+                'is_main_image' => 1 ]
             );
         } else {
             $imageModel = $product->images()->create(['path' => $dbPath]);
         }
+
 
         return response()->json([
             'success' => true,
@@ -364,26 +376,19 @@ class ProductController
      */
     private function saveProductImages(Product $product, $request)
     {
-//        $images = $request->get('images');
-//        dd($request->all());
-//        if ($images !== null && count($images) > 0) {
-            $mainImageId = $request->get('main_image_id');
-            if ($mainImageId !== null){
-                $image = $product->images()->find($mainImageId);
-                $image->is_main_image = 1;
-                $image->save();
+        $mainImageId = $request->get('main_image_id');
+        if ($mainImageId !== null){
+            $image = $product->images()->find($mainImageId);
+            $image->is_main_image = 1;
+            $image->save();
+            $images = $product->images()->get();
+            foreach ($images as $img){
+                if ($img->id !== (int)$mainImageId){
+                    $img->is_main_image = 0;
+                    $img->save();
+                }
             }
-//            foreach ($images as $id => $data) {
-//                $imageModel = $product->images()->find($id);
-//                $imageModel->alt_text = $data['alt_text'] ?? '';
-//                if ($mainImageId === (string)$id){
-//                    $imageModel->is_main_image = 1;
-//                }else{
-//                    $imageModel->is_main_image = 0;
-//                }
-//                $imageModel->save();
-//            }
-//        }
+        }
     }
 
     /**

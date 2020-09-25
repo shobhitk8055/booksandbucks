@@ -1,0 +1,13 @@
+[24-Sep-2020 06:34:16 UTC] PHP Warning:  symlink(): No such file or directory in /home2/booksand/public_html/symlink.php on line 4
+[24-Sep-2020 06:35:57 UTC] PHP Warning:  symlink(): No such file or directory in /home2/booksand/public_html/symlink.php on line 4
+[24-Sep-2020 06:37:00 UTC] PHP Warning:  symlink(): No such file or directory in /home2/booksand/public_html/symlink.php on line 4
+[24-Sep-2020 06:37:57 UTC] PHP Warning:  symlink(): No such file or directory in /home2/booksand/public_html/symlink.php on line 5
+[24-Sep-2020 06:38:23 UTC] PHP Warning:  symlink(): No such file or directory in /home2/booksand/public_html/symlink.php on line 5
+[24-Sep-2020 06:38:26 UTC] PHP Warning:  symlink(): No such file or directory in /home2/booksand/public_html/symlink.php on line 5
+[24-Sep-2020 06:39:23 UTC] PHP Warning:  symlink(): No such file or directory in /home2/booksand/public_html/symlink.php on line 5
+[24-Sep-2020 06:43:07 UTC] PHP Warning:  symlink(): Permission denied in /home2/booksand/public_html/symlink.php on line 4
+[24-Sep-2020 06:44:04 UTC] PHP Warning:  symlink(): File exists in /home2/booksand/public_html/symlink.php on line 4
+[25-Sep-2020 06:54:58 UTC] PHP Warning:  symlink(): File exists in /home2/booksand/public_html/symlink.php on line 2
+[25-Sep-2020 06:55:01 UTC] PHP Warning:  symlink(): File exists in /home2/booksand/public_html/symlink.php on line 2
+[25-Sep-2020 06:55:04 UTC] PHP Warning:  symlink(): File exists in /home2/booksand/public_html/symlink.php on line 2
+[25-Sep-2020 07:13:15 UTC] PHP Warning:  symlink(): File exists in /home2/booksand/public_html/symlink.php on line 2

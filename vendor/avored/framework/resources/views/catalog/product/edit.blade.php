@@ -24,7 +24,9 @@
         <div class="w-full block">
             <form 
                 method="post"
-                action="{{ route('admin.product.update', $product->id) }}">
+                action="{{ route('admin.product.update', $product->id) }}"
+                enctype="multipart/form-data"
+            >
                 @csrf
                 @method('put')
 

@@ -71,6 +71,11 @@ Route::middleware(['web', 'admin.auth:admin', 'permission'])
         )->name('product.create.variation');
 
         Route::post(
+            'b',
+            [\AvoRed\Framework\Catalog\Controllers\ProductController::class, 'b']
+        )->name('product.create.b');
+
+        Route::post(
             'variation/{product}/save-variation',
             [\AvoRed\Framework\Catalog\Controllers\ProductController::class, 'saveVariation']
         )->name('product.save.variation');

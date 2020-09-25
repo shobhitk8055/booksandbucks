@@ -1,5 +1,4 @@
 <h1>{{ __('avored::system.image_title') }}</h1>
-
     <avored-upload
         label-text="{{ __('avored::system.btn.upload') }}"
         field-name="images"
@@ -8,6 +7,18 @@
         error-text="{{ $errors->first('images') }}"
         upload-url="{{ route('admin.product.image.upload', ['product' => $product]) }}"
     ></avored-upload>
+    <p style="margin-top:10px;
+              margin-bottom:10px;
+              font-size: 12px;
+              background-color: #FFC107;
+              color: black;
+              font-weight: bold;
+              width: max-content;
+              padding-left:5px;
+              padding-right:5px;
+              border-radius:5px;
+    ">*The name of the image should not contain special characters like +#!$@%^</p>
+
 
 <div class="mt-3" v-for="item in productImages" :key="item.id">
 
@@ -16,6 +27,7 @@
             <div class="flex rounded-full border-2 border-red-500 p-px w-16 h-16">
 
                 <img :src="`/storage/${item.path}`" alt class="w-full h-full rounded-full" />
+
             </div>
         </div>
         <div class="w-2/6">
@@ -39,7 +51,7 @@
             <input type="radio"
                 class="mt-3 ml-5"
                 name="main_image_id"
-                {{--:checked="item.is_main_image">--}}
+                :checked="item.is_main_image"
                 v-model="item.is_main_image"
                 v-bind:value="item.id">
             {{ __('Is main image') }}
@@ -53,4 +65,6 @@
 
         {{--</div>--}}
     </div>
+
 </div>
+
