@@ -73,6 +73,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+//        dd($data);
         return Customer::create([
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],
@@ -89,7 +90,6 @@ class RegisterController extends Controller
      */
     public function register(Request $request)
     {
-      
         $this->validator($request->all())->validate();
 
         event(new Registered($user = $this->create($request->all())));

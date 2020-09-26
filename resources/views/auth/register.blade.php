@@ -22,7 +22,7 @@
                             <div class="login_part_form_iner">
                                 <h3>New to us ! <br>
                                     Please Sign up now</h3>
-                                <form class="row contact_form" action="{{ route('register') }}" method="post" novalidate="novalidate">
+                                <form class="row contact_form" action="{{ route('register') }}" method="post">
                                     <div class="col-md-12 form-group p_star">
                                         <input type="text" class="form-control" id="first_name" error-text="{{ $errors->first('first_name') }}" name="first_name" value=""
                                                placeholder="First Name">

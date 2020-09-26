@@ -93,7 +93,7 @@
                         <div class="popular-caption">
                             <h3><a href="{{ route('product.show', $product->slug) }}">{{$product->name}}</a></h3>
                             <span>
-                                {{ session()->get('default_currency')->symbol . number_format($product->price, 2) }}
+                                {{ "₹ " . number_format($product->price, 2) }}
                             </span>
                         </div>
                     </div>
