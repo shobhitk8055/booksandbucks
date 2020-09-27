@@ -2,7 +2,7 @@
 
 
 @section('meta_title')
-    {{ __('avored::system.pages.title.create', ['attribute' => __('avored::system.terms.role')]) }}: AvoRed E commerce Admin Dashboard
+    {{ __('avored::system.pages.title.create', ['attribute' => __('avored::system.terms.role')]) }}: Books and Bucks
 @endsection
 
 @section('page_title')

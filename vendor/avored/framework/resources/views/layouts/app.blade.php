@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('meta_title', 'AvoRed E commerce')</title>
+    <title>@yield('meta_title', 'Books and Bucks')</title>
 
     <!-- Styles -->
     <link href="{{ asset('vendor/avored/css/app.css') }}" rel="stylesheet">

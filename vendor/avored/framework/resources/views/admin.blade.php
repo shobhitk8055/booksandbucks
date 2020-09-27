@@ -1,7 +1,7 @@
 @extends('avored::layouts.app')
 
 @section('meta_title')
-    AvoRed E commerce Admin Dashboard
+    Admin Panel - Books and Bucks
 @endsection
 
 @section('page_title')
@@ -25,19 +25,19 @@
             Admin Dashboard
         </div>
         <div class="p-4">
-            <p>We will really appriciate if you give us any feedback about the project.
-            It helps us to developed more better.</p>
-            <p>You can help us in my ways like helping in our 
-                <a href="https://github.com/avored/documentation" title="AvoRed Documantation Repository">
-                    docs
-                </a>, 
-                <a href="https://github.com/avored/framework" title="AvoRed Framework Repository">
-                    framework
-                </a>, or create an
-                <a href="https://github.com/avored/laravel-ecommerce/issues" title="Avored laravel repository">
-                    issue
-                </a>.
-            </p>
+            {{--<p>We will really appriciate if you give us any feedback about the project.--}}
+            {{--It helps us to developed more better.</p>--}}
+            {{--<p>You can help us in my ways like helping in our --}}
+                {{--<a href="https://github.com/avored/documentation" title="AvoRed Documantation Repository">--}}
+                    {{--docs--}}
+                {{--</a>, --}}
+                {{--<a href="https://github.com/avored/framework" title="AvoRed Framework Repository">--}}
+                    {{--framework--}}
+                {{--</a>, or create an--}}
+                {{--<a href="https://github.com/avored/laravel-ecommerce/issues" title="Avored laravel repository">--}}
+                    {{--issue--}}
+                {{--</a>.--}}
+            {{--</p>--}}
             
         </div>
     </div>

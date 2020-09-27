@@ -101,12 +101,11 @@ class ProductController
      * @return \Illuminate\View\View
      */
 
-    public function b(Request $request){
-        $image = $request->file('i');
-        $name = $image->getClientOriginalName();
-        $path = $image->storeAs('uploads/catalog',$name,'avored');
-        rename('../storage/app/public/'.$path,'storage/'.$path);
-//        Storage::move($path,$name);
+    public function imageDelete($id){
+        $image = ProductImage::find($id);
+        $productId = $image->product_id;
+        $image->delete();
+        return redirect()->route('admin.product.edit', ['product' => $productId]);
     }
 
     public function index()

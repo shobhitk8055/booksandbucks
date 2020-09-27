@@ -70,10 +70,10 @@ Route::middleware(['web', 'admin.auth:admin', 'permission'])
             [\AvoRed\Framework\Catalog\Controllers\ProductController::class, 'createVariation']
         )->name('product.create.variation');
 
-        Route::post(
-            'b',
-            [\AvoRed\Framework\Catalog\Controllers\ProductController::class, 'b']
-        )->name('product.create.b');
+        Route::get(
+            'product/{id}/delete',
+            [\AvoRed\Framework\Catalog\Controllers\ProductController::class, 'imageDelete']
+        )->name('product.delete');
 
         Route::post(
             'variation/{product}/save-variation',

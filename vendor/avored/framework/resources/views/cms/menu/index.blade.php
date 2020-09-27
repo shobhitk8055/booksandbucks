@@ -1,7 +1,7 @@
 @extends('avored::layouts.app')
 
 @section('meta_title')
-    {{ __('avored::system.pages.title.list', ['attribute' => __('avored::system.terms.menu')]) }}: AvoRed E commerce Admin Dashboard
+    {{ __('avored::system.pages.title.list', ['attribute' => __('avored::system.terms.menu')]) }}: Books and Bucks
 @endsection
 
 @section('page_title')

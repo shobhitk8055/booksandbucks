@@ -1,7 +1,7 @@
 @extends('avored::layouts.app')
 
 @section('meta_title')
-    AvoRed E commerce Admin Dashboard
+    Books and Bucks
 @endsection
 
 @section('page_title')

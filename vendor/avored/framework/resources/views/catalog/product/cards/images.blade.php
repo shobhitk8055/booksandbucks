@@ -31,6 +31,13 @@
             </div>
         </div>
         <div class="w-2/6">
+            <input type="radio"
+                   class="mt-3 ml-5"
+                   name="main_image_id"
+                   :checked="item.is_main_image"
+                   v-model="item.is_main_image"
+                   v-bind:value="item.id">
+            {{ __('Is main image') }}
             {{--<input--}}
             {{--label="{{ __('avored::system.fields.alt_text') }}"--}}
             {{--v-bind:name="'images[' + item.id +'][alt_text]'"--}}
@@ -48,13 +55,7 @@
             {{--</avored-input>--}}
         </div>
         <div class="w-2/6">
-            <input type="radio"
-                class="mt-3 ml-5"
-                name="main_image_id"
-                :checked="item.is_main_image"
-                v-model="item.is_main_image"
-                v-bind:value="item.id">
-            {{ __('Is main image') }}
+            <a style="color: red; border: red;" :href="`/admin/product/${item.id}/delete`">Delete</a>
         </div
         >
 
