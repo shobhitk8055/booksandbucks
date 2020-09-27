@@ -20,6 +20,7 @@ class ProductController extends Controller
     /**
      * home controller construct.
      */
+
     public function __construct(
         ProductModelInterface $productRepository,
         ProductReviewModelInterface $productReviewRepository

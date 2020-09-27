@@ -33,6 +33,7 @@ Vue.component('cart-page', require('../components/CartPage.vue').default)
 Vue.component('avored-layout', require('../components/layout/Layout.vue').default)
 Vue.component('login-fields', require('../components/auth/LoginFields.vue').default)
 Vue.component('register-fields', require('../components/auth/RegisterFields.vue').default)
+Vue.component('shop-page', require('../components/ShopPage.vue').default)
 
 Vue.component('avored-nav', require('../components/AvoRedNav.vue').default)
 
