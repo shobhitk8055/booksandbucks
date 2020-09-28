@@ -1,4 +1,5 @@
 import Vue from 'vue'
+
 import App from './App.vue'
 
 
@@ -9,10 +10,13 @@ import apolloProvider from './services/apollo'
 import Router from './services/router'
 import Store from './services/store'
 
+import VueMaterial from 'vue-material'
+import 'vue-material/dist/vue-material.css'
 import system from './modules/system'
 
 /* Initialize System Module */
 
+Vue.use(VueMaterial)
 Store.registerModule('system', system.store)
 Router.addRoutes(system.routes)
 Store.dispatch('system/initialize', null, { root: true })

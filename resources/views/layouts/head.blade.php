@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="/favicon.png">
     <!-- Scripts -->
 
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -18,7 +19,7 @@
        @yield('content')
     </avored-layout>
 </div>
-
+    @include('partials.footer1')
 @if(file_exists(public_path('mix-manifest.json')))
     <script src="{{ mix('js/avored.js') }}"></script>
 @else
