@@ -31,31 +31,22 @@
         <div class="flex mt-3 items-center">
             <div class="w-1/2">
                 <div class="mt-3">
-                    {{--<avored-select--}}
-                        {{--label-text="{{ __('avored::system.fields.category') }}"--}}
-                        {{--field-name="category[]"--}}
-                        {{--:multiple=true--}}
-                        {{--error-text="{{ $errors->first('category') }}"--}}
-                        {{--:options="{{ json_encode($categoryOptions) }}"--}}
-                        {{--:value="{{ $product->categories ?  json_encode($product->categories->pluck('id')->toArray()) : '' }}"--}}
-                    {{-->--}}
-                    {{--</avored-select>--}}
-                    {{--<label for="category1">Category 1</label>--}}
-                    {{--<select name="category" id="category1" class="form-control">--}}
-                        {{--@foreach($categoryOptions as $option)--}}
-                                {{--<option value="{{$option}}">{{$option}}</option>--}}
-                        {{--@endforeach--}}
-                    {{--</select>--}}
-
-                    {{--<label for="category1">Category 2</label>--}}
                     <avored-select
-                            label-text="{{ __('avored::system.fields.category') }}"
-                            field-name="category"
-                            :options="{{ json_encode($categoryOptions) }}"
+                        label-text="{{ __('avored::system.fields.category') }}"
+                        field-name="category[]"
+                        :multiple=true
+                        error-text="{{ $errors->first('category') }}"
+                        :options="{{ json_encode($categoryOptions) }}"
+                        :value="{{ $product->categories ?  json_encode($product->categories->pluck('id')->toArray()) : '' }}"
                     >
                     </avored-select>
-                        {{--<option value=""--}}
-                    {{--</select>--}}
+
+                    {{--<avored-select--}}
+                            {{--label-text="{{ __('avored::system.fields.category') }}"--}}
+                            {{--field-name="category"--}}
+                            {{--:options="{{ json_encode($categoryOptions) }}"--}}
+                    {{-->--}}
+                    {{--</avored-select>--}}
                 </div>
             </div>
             <div class="w-1/2 ml-3">

@@ -11815,7 +11815,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['product', 'image', 'csrf', 'category', 'category_product'],
   data: function data() {
@@ -11865,9 +11864,9 @@ __webpack_require__.r(__webpack_exports__);
           }
         }
 
-        return this.removeMinimum(this.filterProducts(products, this.filter));
+        return this.removeSame(this.removeMinimum(this.filterProducts(products, this.filter)));
       } else {
-        return this.removeMinimum(this.filterProducts(this.products, this.filter));
+        return this.removeSame(this.removeMinimum(this.filterProducts(this.products, this.filter)));
       }
     },
     filterProducts: function filterProducts(products, filter) {
@@ -11878,9 +11877,9 @@ __webpack_require__.r(__webpack_exports__);
         case "H2L":
           return products.sort(function (a, b) {
             if (a.price < b.price) {
-              return -1; // a should come after b in the sorted order
+              return -1;
             } else if (a.price > b.price) {
-              return 1; // and and b are the same
+              return 1;
             } else {
               return 0;
             }
@@ -11889,9 +11888,9 @@ __webpack_require__.r(__webpack_exports__);
         case "L2H":
           return products.sort(function (a, b) {
             if (a.price > b.price) {
-              return -1; // a should come after b in the sorted order
+              return -1;
             } else if (a.price < b.price) {
-              return 1; // and and b are the same
+              return 1;
             } else {
               return 0;
             }
@@ -11934,7 +11933,6 @@ __webpack_require__.r(__webpack_exports__);
         var allProducts = [];
 
         for (var i = 0; i < products.length; i++) {
-          // console.log(products[i].price);
           if (products[i].price <= max + 1) {
             allProducts.push(products[i]);
           }
@@ -11944,6 +11942,12 @@ __webpack_require__.r(__webpack_exports__);
       } else {
         return products;
       }
+    },
+    removeSame: function removeSame(products) {
+      var jsonObject = products.map(JSON.stringify);
+      var uniqueSet = new Set(jsonObject);
+      var uniqueArray = Array.from(uniqueSet).map(JSON.parse);
+      return uniqueArray;
     }
   },
   mounted: function mounted() {
@@ -37232,7 +37236,9 @@ var render = function() {
                     _vm._v(
                       "\n                                    Max: " +
                         _vm._s(
-                          _vm.range === null ? _vm.min : parseInt(_vm.range)
+                          _vm.range === null
+                            ? parseInt(_vm.min)
+                            : parseInt(_vm.range)
                         ) +
                         " ₹\n                                "
                     )
@@ -37375,10 +37381,8 @@ var render = function() {
                           [_vm._v(_vm._s(product.name))]
                         )
                       ]),
-                      _vm._v(" "),
-                      _c("span"),
                       _vm._v(
-                        "\n                                ₹ " +
+                        "    ₹ " +
                           _vm._s(_vm.numberFormat(product.price)) +
                           "\n                        "
                       )

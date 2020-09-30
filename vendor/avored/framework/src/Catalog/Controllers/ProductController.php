@@ -172,6 +172,7 @@ class ProductController
      */
     public function update(ProductRequest $request, Product $product)
     {
+//        dd($request->all());
         $product->update($request->all());
         $this->saveProductCategory($product, $request);
         $this->saveProductImages($product, $request);
@@ -312,12 +313,14 @@ class ProductController
      */
     private function saveProductCategory(Product $product, $request)
     {
-        if ($request->get('category') !== null){
-            $product->categories()->sync($request->get('category'));
-        }
-//        if ($request->get('category') !== null && count($request->get('category')) > 0) {
+//        if ($request->get('category') !== null){
 //            $product->categories()->sync($request->get('category'));
 //        }
+        $categories = $request->get('category');
+        $category = array_slice($categories,1);
+        if ($category !== null && count($category) > 0) {
+            $product->categories()->sync($category);
+        }
     }
 
 

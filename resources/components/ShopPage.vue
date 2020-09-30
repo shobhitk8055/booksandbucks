@@ -49,7 +49,7 @@
                                         Rs {{parseInt(min)}} - {{parseInt(max)}}
                                     </label>
                                     <span style="float:right;">
-                                        Max: {{range===null ? min : parseInt(range)}} ₹
+                                        Max: {{range===null ? parseInt(min) : parseInt(range)}} ₹
                                     </span>
                                     <input v-model="range"
                                            type="range"
@@ -114,10 +114,9 @@
                                 <img v-bind:src="getImageURL(product.id)" alt="">
                             </div>
                             <div class="popular-caption">
-                                <h4 style="padding-top: 15px;"><a style="color:#444444" href="">{{product.name}}</a></h4>
-                                <span>
-                            </span>
-                                    ₹ {{ numberFormat(product.price) }}
+                                <h4 style="padding-top: 15px;">
+                                    <a style="color:#444444" href="">{{product.name}}</a>
+                                </h4>    ₹ {{ numberFormat(product.price) }}
                             </div>
                             <form  method="post" action="">
                                 <input type="hidden" name="slug" :value="product.slug" />
@@ -182,9 +181,9 @@
                             }
                         }
                     }
-                    return this.removeMinimum(this.filterProducts(products,this.filter));
+                    return this.removeSame(this.removeMinimum(this.filterProducts(products,this.filter)));
                 } else {
-                    return this.removeMinimum(this.filterProducts(this.products,this.filter));
+                    return this.removeSame(this.removeMinimum(this.filterProducts(this.products,this.filter)));
                 }
             },
             filterProducts(products,filter){
@@ -193,43 +192,27 @@
                         return products;
                     case "H2L":
                         return products.sort(function (a,b) {
-                            if(a.price < b.price){
-                                return -1;
-                                // a should come after b in the sorted order
-                            }else if(a.price > b.price){
-                                return 1;
-                                // and and b are the same
-                            }else{
-                                return 0;
-                            }
+                            if( a.price < b.price){ return -1; }
+                            else if( a.price > b.price){ return 1; }
+                            else{ return 0; }
                         });
                     case "L2H":
                         return products.sort(function (a,b) {
-                            if(a.price > b.price){
-                                return -1;
-                                // a should come after b in the sorted order
-                            }else if(a.price < b.price){
-                                return 1;
-                                // and and b are the same
-                            }else{
-                                return 0;
-                            }
+                            if(a.price > b.price){ return -1; }
+                            else if(a.price < b.price){ return 1; }
+                            else{ return 0; }
                         });
                     case "NF":
                         return products.sort(function (a,b) {
-                            if (a.created_at > b.created_at){
-                                return -1;
-                            }else if(a.created_at < b.created_at){
-                                return 1;
-                            }else{
-                                return 0;
-                            }
+                            if (a.created_at > b.created_at){ return -1; }
+                            else if(a.created_at < b.created_at){ return 1; }
+                            else{ return 0; }
                         })
                 }
             },
+
             getRange(products,parameter){
                 let min = products[0].price, max = products[0].price;
-
                 for (let i = 1, len=products.length; i < len; i++) {
                     let v = products[i].price;
                     min = (v < min) ? v : min;
@@ -238,12 +221,12 @@
                 if (parameter === "max"){ return max; }
                 if (parameter === "min"){ return min; }
             },
+
             removeMinimum(products){
                 let max = this.range;
                 if (max!==null){
                     let allProducts = [];
                     for (let i=0;i<products.length;i++){
-                    // console.log(products[i].price);
                         if (products[i].price <= max+1){
                             allProducts.push(products[i]);
                         }
@@ -252,6 +235,12 @@
                 }else {
                     return products;
                 }
+            },
+            removeSame(products){
+                let jsonObject = products.map(JSON.stringify);
+                let uniqueSet = new Set(jsonObject);
+                let uniqueArray = Array.from(uniqueSet).map(JSON.parse);
+                return uniqueArray;
             }
         },
         mounted() {
