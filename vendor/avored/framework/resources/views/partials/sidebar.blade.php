@@ -7,9 +7,12 @@
     </div>
 
     <nav class="mt-10">
+
         @foreach ($adminMenus as $key => $adminMenu)
             <avored-menu :sidebar="sidebar" :menu="{{ json_encode($adminMenu) }}"></avored-menu>
+{{--            <p>{{ json_encode($adminMenu) }}</p>--}}
         @endforeach
+        <avored-menu :sidebar="sidebar" :menu="{{ json_encode($genres) }}"> adfad</avored-menu>
     </nav>
 
 </div>

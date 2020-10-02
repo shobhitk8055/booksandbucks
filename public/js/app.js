@@ -11815,6 +11815,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['product', 'image', 'csrf', 'category', 'category_product'],
   data: function data() {

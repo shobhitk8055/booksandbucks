@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="11308df2-4c9a-48bf-8274-dc8e8915ff28" name="Default Changelist" comment="">
+    <list default="true" id="11308df2-4c9a-48bf-8274-dc8e8915ff28" name="Default Changelist" comment="multiple categories">
+      <change afterPath="$PROJECT_DIR$/vendor/avored/framework/resources/views/genre/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/avored/framework/resources/views/genre/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/avored/framework/src/Database/Models/Book.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/avored/framework/src/Database/Models/Genre.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/avored/framework/src/Genre/Controllers/GenreController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/components/ShopPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/components/ShopPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/avored/framework/database/migrations/2017_03_29_000000_avored_framework_schema.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/avored/framework/database/migrations/2017_03_29_000000_avored_framework_schema.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/avored/framework/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/avored/framework/resources/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/product/_fields.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/product/_fields.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/product/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/product/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/avored/framework/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/avored/framework/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/avored/framework/resources/views/partials/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/avored/framework/resources/views/partials/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/avored/framework/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/avored/framework/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/avored/framework/src/Catalog/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/avored/framework/src/Catalog/Controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/avored/framework/src/Database/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/avored/framework/src/Database/Models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/avored/framework/src/Database/Repository/CurrencyRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/avored/framework/src/Database/Repository/CurrencyRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/avored/framework/src/Menu/MenuBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/avored/framework/src/Menu/MenuBuilder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/avored/framework/src/System/ViewComposers/LayoutComposer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/avored/framework/src/System/ViewComposers/LayoutComposer.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,10 +77,11 @@
           <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.14" value="2" />
           <entry key="project.open.time.15" value="2" />
+          <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.2" value="3" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="18" />
+          <entry key="project.opened" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -73,40 +90,40 @@
           <entry key="env" value="1" />
           <entry key="gitignore" value="1" />
           <entry key="jpg" value="1" />
-          <entry key="js" value="14" />
+          <entry key="js" value="17" />
           <entry key="json" value="3" />
-          <entry key="php" value="210" />
-          <entry key="vue" value="20" />
+          <entry key="php" value="265" />
+          <entry key="vue" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Blade" value="157" />
+          <entry key="Blade" value="182" />
           <entry key="CSS" value="1" />
           <entry key="Image" value="1" />
           <entry key="JSON" value="3" />
-          <entry key="JavaScript" value="14" />
-          <entry key="PHP" value="53" />
+          <entry key="JavaScript" value="17" />
+          <entry key="PHP" value="83" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Vue.js" value="20" />
+          <entry key="Vue.js" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="env" value="13" />
-          <entry key="js" value="60" />
-          <entry key="php" value="4069" />
-          <entry key="txt" value="168" />
-          <entry key="vue" value="3845" />
+          <entry key="js" value="61" />
+          <entry key="php" value="8047" />
+          <entry key="txt" value="190" />
+          <entry key="vue" value="3851" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="2651" />
-          <entry key="JavaScript" value="60" />
-          <entry key="PHP" value="1418" />
-          <entry key="PLAIN_TEXT" value="181" />
-          <entry key="Vue.js" value="3845" />
+          <entry key="Blade" value="4180" />
+          <entry key="JavaScript" value="62" />
+          <entry key="PHP" value="3866" />
+          <entry key="PLAIN_TEXT" value="203" />
+          <entry key="Vue.js" value="3851" />
         </counts>
       </usages-collector>
     </session>
@@ -117,31 +134,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/components/ShopPage.vue">
+        <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/product/_fields.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="185" column="109" selection-start-line="185" selection-start-column="109" selection-end-line="185" selection-end-column="109" />
-              <folding>
-                <element signature="n#table#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" />
-                <element signature="n#style#0;n#th#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#table#1;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#table#2;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" />
-                <element signature="n#table#3;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" />
-                <element signature="n#style#0;n#h4#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#h4#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="-378">
+              <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/product/_fields.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/js/modules/system/components/forms/AvoRedSelect.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="35" column="44" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
+            <state relative-caret-position="153">
+              <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -149,45 +154,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/avored/framework/src/Catalog/Controllers/ProductController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5151">
-              <caret line="323" column="5" selection-start-line="323" selection-start-column="5" selection-end-line="323" selection-end-column="5" />
+            <state relative-caret-position="109">
+              <caret line="342" column="7" selection-start-line="342" selection-start-column="7" selection-end-line="342" selection-end-column="7" />
+              <folding>
+                <element signature="e#56#98#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/category/create.blade.php">
+        <entry file="file://$PROJECT_DIR$/vendor/avored/framework/src/Database/Models/Book.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/category/edit.blade.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/category/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/head.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/app1.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="231">
+              <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -196,7 +176,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ezsystems/ezplatform</find>
       <find>css'</find>
       <find>.js</find>
       <find>.js&quot;</find>
@@ -208,14 +187,25 @@
       <find>create</find>
       <find>avored</find>
       <find>unresolvablePrimitive</find>
-      <find>edit</find>
       <find>&lt;script&gt;import isNil from 'lodash/isNil';import isEqual from 'lodash/isEqual'export default {    props: ['product', 'variations'],    data() {        return {            qty: 1,            attributes: {},            price: 0,            productQty: 0,            productMainImage: '',            selectedAttributes: {}        }    },    methods: {        changeQty(value) {            this.qty = value        },        attributeDropdownOption(val) {            console.log(val);            return 'attribute_dropdown_option_' + val;        },        checkIfSameVariation(variations) {            var comparableVariation = {};            variations.forEach(variation =&gt; {                if (isNil(comparableVariation[variation['attribute_id']])) {                    comparableVariation[variation['attribute_id']] = {}                }                comparableVariation[variation.attribute_id] = variation.attribute_dropdown_option_id            })            return isEqual(comparableVariation, this.selectedAttributes)        },        changeAttributeVariable(value) {            if (!isNil(value.target)) {                value = value.target.value            }            var attributeValue = JSON.parse(value)            var attributeRef = this.$refs['attribute-' + attributeValue.attribute_id]            var attributeLength = JSON.parse(attributeRef.$attrs['data-attribute-length'])            var app = this;            this.selectedAttributes[attributeValue['attribute_id']] = attributeValue['attribute_dropdown_option_id']            var selectedVariationId = null            var selectedVariation = null            if (Object.keys(this.selectedAttributes).length === attributeLength) {                Object.keys(app.variations).forEach(key =&gt; {                    var variation = app.variations[key];                    var result = app.checkIfSameVariation(variation);                    if (result) {                        selectedVariationId = key                        selectedVariation = variation[0].variation                       }                })                this.price = selectedVariation.price;                this.productQty = selectedVariation['qty'];                selectedVariation.images.forEach(image =&gt; {                    if (!isNil(image.is_main_image) &amp;&amp; image.is_main_image == 1) {                        this.productMainImage = '/storage/'+ image.path                    }                })                if (isNil(this.attributes['attribute_product_value_id'])) {                    this.attributes['attribute_product_value_id'] = [];                }                this.attributes['attribute_product_value_id'] = selectedVariation.id;            }                   }    },    mounted() {        this.price = this.product['price'];        this.productQty = this.product['qty'];        this.product.images.forEach(image =&gt; {            if (!isNil(image.is_main_image) &amp;&amp; image.is_main_image == 1) {                this.productMainImage = '/storage/'+ image.path            }        })            }}&lt;/script&gt;</find>
       <find>user-order-table</find>
       <find>cart-page</find>
       <find>removeMinimum</find>
-      <find>update</find>
-      <find>saveProductCategory</find>
       <find>getProducts</find>
+      <find>avored::system.tabl.property</find>
+      <find>$categoryOptions</find>
+      <find>customers</find>
+      <find>genre</find>
+      <find>$adminMenus</find>
+      <find>View</find>
+      <find>product-table</find>
+      <find>saveProductCategory</find>
+      <find>index</find>
+      <find>edit</find>
+      <find>avored-input</find>
+      <find>saveProductGenre</find>
+      <find>update</find>
+      <find>saveBook</find>
     </findStrings>
     <replaceStrings>
       <replace>css</replace>
@@ -223,9 +213,9 @@
     </replaceStrings>
     <dirStrings>
       <dir>C:\laragon\www\booksandbucks\vendor\avored\framework\resources\components</dir>
-      <dir>C:\laragon\www\booksandbucks\vendor\avored</dir>
       <dir>C:\laragon\www\booksandbucks\vendor\avored\framework</dir>
       <dir>C:\laragon\www\booksandbucks</dir>
+      <dir>C:\laragon\www\booksandbucks\vendor\avored</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -234,22 +224,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/system/language/edit.blade.php" />
-        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/system/language/index.blade.php" />
-        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/system/role/create.blade.php" />
-        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/system/role/edit.blade.php" />
-        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/system/role/index.blade.php" />
-        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/user/admin-user/create.blade.php" />
-        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/user/admin-user/edit.blade.php" />
-        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/user/admin-user/index.blade.php" />
-        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/spa/index.blade.php" />
-        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/promotion/promotion-code/create.blade.php" />
-        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/promotion/promotion-code/edit.blade.php" />
-        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/promotion/promotion-code/index.blade.php" />
-        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/order/order/index.blade.php" />
-        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/order/order/show.blade.php" />
-        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/order/order-status/create.blade.php" />
-        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/order/order-status/edit.blade.php" />
         <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/order/order-status/index.blade.php" />
         <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/cms/menu/create.blade.php" />
         <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/cms/menu/edit.blade.php" />
@@ -263,14 +237,11 @@
         <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/category/create.blade.php" />
         <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/category/edit.blade.php" />
         <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/category/index.blade.php" />
-        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/product/create.blade.php" />
         <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/product/edit.blade.php" />
-        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/product/index.blade.php" />
         <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/property/create.blade.php" />
         <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/property/edit.blade.php" />
         <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/property/index.blade.php" />
         <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/product/cards/images.blade.php" />
-        <option value="$PROJECT_DIR$/vendor/avored/framework/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" />
         <option value="$PROJECT_DIR$/resources/js/app.js" />
         <option value="$PROJECT_DIR$/resources/views/layouts/nav.blade.php" />
@@ -282,9 +253,28 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/app1.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/head.blade.php" />
         <option value="$PROJECT_DIR$/resources/js/main.js" />
-        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/product/_fields.blade.php" />
-        <option value="$PROJECT_DIR$/vendor/avored/framework/src/Catalog/Controllers/ProductController.php" />
         <option value="$PROJECT_DIR$/resources/components/ShopPage.vue" />
+        <option value="$PROJECT_DIR$/vendor/avored/framework/src/Menu/MenuBuilder.php" />
+        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/partials/sidebar.blade.php" />
+        <option value="$PROJECT_DIR$/vendor/avored/framework/src/Database/Repository/CurrencyRepository.php" />
+        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/product/index.blade.php" />
+        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/js/app.js" />
+        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/layouts/app.blade.php" />
+        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/genre/edit.blade.php" />
+        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/genre/index.blade.php" />
+        <option value="$PROJECT_DIR$/vendor/avored/framework/routes/web.php" />
+        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/genre/create.blade.php" />
+        <option value="$PROJECT_DIR$/vendor/avored/framework/src/Genre/Controllers/GenreController.php" />
+        <option value="$PROJECT_DIR$/vendor/avored/framework/src/System/ViewComposers/LayoutComposer.php" />
+        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/product/create.blade.php" />
+        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/js/modules/system/components/forms/AvoRedInput.vue" />
+        <option value="$PROJECT_DIR$/vendor/avored/framework/database/migrations/2017_03_29_000000_avored_framework_schema.php" />
+        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/vendor/avored/framework/src/Catalog/Controllers/ProductController.php" />
+        <option value="$PROJECT_DIR$/vendor/avored/framework/src/Database/Models/Product.php" />
+        <option value="$PROJECT_DIR$/vendor/avored/framework/src/Database/Models/Genre.php" />
+        <option value="$PROJECT_DIR$/vendor/avored/framework/src/Database/Models/Book.php" />
+        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/product/_fields.blade.php" />
       </list>
     </option>
   </component>
@@ -440,18 +430,17 @@
       <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1050" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="948" />
+    <option name="y" value="-12" />
+    <option name="width" value="984" />
+    <option name="height" value="1044" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -462,13 +451,36 @@
             <path>
               <item name="booksandbucks" type="b2602c69:ProjectViewProjectNode" />
               <item name="booksandbucks" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="booksandbucks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="booksandbucks" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="booksandbucks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="booksandbucks" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="seeds" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="booksandbucks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="booksandbucks" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="booksandbucks" type="b2602c69:ProjectViewProjectNode" />
               <item name="booksandbucks" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="booksandbucks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="booksandbucks" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="booksandbucks" type="b2602c69:ProjectViewProjectNode" />
@@ -526,14 +538,42 @@
               <item name="catalog" type="462c0819:PsiDirectoryNode" />
               <item name="product" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="booksandbucks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="booksandbucks" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="avored" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="booksandbucks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="booksandbucks" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="avored" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="booksandbucks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="booksandbucks" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="avored" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Database" type="462c0819:PsiDirectoryNode" />
+              <item name="Models" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="ProductController&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/avored/framework/src/Catalog/Controllers/ProductController.php&#10;Produc&#9;null&#9;null&#10;increase font&#9;ACTION&#9;EditorIncreaseFontSize&#10;images.&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/avored/framework/resources/views/catalog/product/cards/images.blade.php&#10;/Illuminate/Support/Arr.php&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/laravel/framework/src/Illuminate/Support/Arr.php&#10;functions/marshal_uri_from_sapi.php&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/laminas/laminas-diactoros/src/functions/marshal_uri_from_sapi.php&#10;Illuminate/Foundation/Http/Kernel.php&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&#10;Product&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/avored/framework/src/Catalog/Controllers/ProductController.php&#10;vendor/avored/images&#9;FILE&#9;file://C:/laragon/www/booksandbucks/public/vendor/avored/images&#10;saveProductImages&#9;null&#9;null&#10;AvoRedTab&#9;FILE&#9;file://C:/laragon/www/booksandbucks/resources/js/modules/system/components/forms/AvoRedTab.vue&#10;AvoRedTabs&#9;FILE&#9;file://C:/laragon/www/booksandbucks/resources/js/modules/system/components/forms/AvoRedTabs.vue&#10;Controllers\ProductController.&#9;FILE&#9;file://C:/laragon/www/booksandbucks/app/Http/Controllers/ProductController.php&#10;resources/views/layouts/app.blade.php&#9;FILE&#9;file://C:/laragon/www/booksandbucks/resources/views/layouts/app.blade.php&#10;views/layouts/app.blade.php&#9;FILE&#9;file://C:/laragon/www/booksandbucks/resources/views/layouts/app.blade.php&#10;css/app.css&#9;FILE&#9;file://C:/laragon/www/booksandbucks/public/vendor/avored/css/app.css&#10;HomeController&#9;FILE&#9;file://C:/laragon/www/booksandbucks/app/Http/Controllers/HomeController.php&#10;CategoryPage.&#9;FILE&#9;file://C:/laragon/www/booksandbucks/resources/components/CategoryPage.vue&#10;\framework\src\Catalog\Controllers\ProductController&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/avored/framework/src/Catalog/Controllers/ProductController.php&#10;Controllers\ProductController&#9;null&#9;null&#10;Controllers\AttributeController&#9;null&#9;null&#10;illum&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/laravel/framework/src/Illuminate&#10;\Facades\Hash&#9;null&#9;null&#10;Hash&#9;null&#9;null&#10;Auth&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/laravel/framework/src/Illuminate/Support/Facades/Auth.php&#10;LoginController&#9;FILE&#9;file://C:/laragon/www/booksandbucks/app/Http/Controllers/Auth/LoginController.php&#10;Facades\Auth&#9;null&#9;null&#10;Support/Col&#9;null&#9;null&#10;Illuminate\Support\Facades\Auth&#9;null&#9;null&#10;Category&#9;null&#9;null&#10;create_oauth_clients_table&#9;FILE&#9;file://C:/laragon/www/laravel-ecommerce/vendor/laravel/passport/database/migrations/2016_06_01_000004_create_oauth_clients_table.php&#10;attribute&#9;FILE&#9;file://C:/laragon/www/laravel-ecommerce/public/storage/uploads/catalog/attributes&#10;User&#9;null&#9;null&#10;avored_review_schema&#9;FILE&#9;file://C:/laragon/www/laravel-ecommerce/modules/avored/review/database/migrations/2017_03_29_000001_avored_review_schema.php&#10;_avored_wishlist_schema&#9;FILE&#9;file://C:/laragon/www/laravel-ecommerce/modules/avored/wishlist/database/migrations/2017_03_29_000001_avored_wishlist_schema.php" />
+    <property name="SearchEverywhereHistoryKey" value="AvoredSelect&#9;FILE&#9;file://C:/laragon/www/booksandbucks/resources/js/modules/system/components/forms/AvoRedSelect.vue&#10;AvoredInput&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/avored/framework/resources/js/modules/system/components/forms/AvoRedInput.vue&#10;Customer&#9;null&#9;null&#10;ProductC&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/avored/framework/src/Catalog/Controllers/ProductController.php&#10;Layout&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/avored/framework/src/System/ViewComposers/LayoutComposer.php&#10;web.php&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/avored/framework/routes/web.php&#10;web.]&#9;null&#9;null&#10;Genre&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/avored/framework/src/Genre/Controllers/GenreController.php&#10;LengthAwarePaginator&#9;null&#9;null&#10;ProductModelInterface&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/avored/framework/src/Database/Contracts/ProductModelInterface.php&#10;Product&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/avored/framework/src/Catalog/Controllers/ProductController.php&#10;routes&#9;FILE&#9;file://C:/laragon/www/booksandbucks/modules/avored/review/routes&#10;CurrencyRepository&#9;null&#9;null&#10;avored-menu&#9;null&#9;null&#10;Framework\Menu\Menu&#9;null&#9;null&#10;ProductController&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/avored/framework/src/Catalog/Controllers/ProductController.php&#10;Produc&#9;null&#9;null&#10;increase font&#9;ACTION&#9;EditorIncreaseFontSize&#10;images.&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/avored/framework/resources/views/catalog/product/cards/images.blade.php&#10;/Illuminate/Support/Arr.php&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/laravel/framework/src/Illuminate/Support/Arr.php&#10;functions/marshal_uri_from_sapi.php&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/laminas/laminas-diactoros/src/functions/marshal_uri_from_sapi.php&#10;Illuminate/Foundation/Http/Kernel.php&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&#10;vendor/avored/images&#9;FILE&#9;file://C:/laragon/www/booksandbucks/public/vendor/avored/images&#10;saveProductImages&#9;null&#9;null&#10;AvoRedTab&#9;FILE&#9;file://C:/laragon/www/booksandbucks/resources/js/modules/system/components/forms/AvoRedTab.vue&#10;AvoRedTabs&#9;FILE&#9;file://C:/laragon/www/booksandbucks/resources/js/modules/system/components/forms/AvoRedTabs.vue&#10;Controllers\ProductController.&#9;FILE&#9;file://C:/laragon/www/booksandbucks/app/Http/Controllers/ProductController.php&#10;resources/views/layouts/app.blade.php&#9;FILE&#9;file://C:/laragon/www/booksandbucks/resources/views/layouts/app.blade.php&#10;views/layouts/app.blade.php&#9;FILE&#9;file://C:/laragon/www/booksandbucks/resources/views/layouts/app.blade.php&#10;css/app.css&#9;FILE&#9;file://C:/laragon/www/booksandbucks/public/vendor/avored/css/app.css&#10;HomeController&#9;FILE&#9;file://C:/laragon/www/booksandbucks/app/Http/Controllers/HomeController.php&#10;CategoryPage.&#9;FILE&#9;file://C:/laragon/www/booksandbucks/resources/components/CategoryPage.vue&#10;\framework\src\Catalog\Controllers\ProductController&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/avored/framework/src/Catalog/Controllers/ProductController.php&#10;Controllers\ProductController&#9;null&#9;null&#10;Controllers\AttributeController&#9;null&#9;null&#10;illum&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/laravel/framework/src/Illuminate&#10;\Facades\Hash&#9;null&#9;null&#10;Hash&#9;null&#9;null&#10;Auth&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/laravel/framework/src/Illuminate/Support/Facades/Auth.php&#10;LoginController&#9;FILE&#9;file://C:/laragon/www/booksandbucks/app/Http/Controllers/Auth/LoginController.php&#10;Facades\Auth&#9;null&#9;null&#10;Support/Col&#9;null&#9;null&#10;Illuminate\Support\Facades\Auth&#9;null&#9;null&#10;Category&#9;null&#9;null&#10;create_oauth_clients_table&#9;FILE&#9;file://C:/laragon/www/laravel-ecommerce/vendor/laravel/passport/database/migrations/2016_06_01_000004_create_oauth_clients_table.php&#10;attribute&#9;FILE&#9;file://C:/laragon/www/laravel-ecommerce/public/storage/uploads/catalog/attributes&#10;User&#9;null&#9;null&#10;avored_review_schema&#9;FILE&#9;file://C:/laragon/www/laravel-ecommerce/modules/avored/review/database/migrations/2017_03_29_000001_avored_review_schema.php&#10;_avored_wishlist_schema&#9;FILE&#9;file://C:/laragon/www/laravel-ecommerce/modules/avored/wishlist/database/migrations/2017_03_29_000001_avored_wishlist_schema.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
@@ -541,7 +581,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -589,7 +629,8 @@
       <workItem from="1601200268971" duration="16407000" />
       <workItem from="1601257220485" duration="9049000" />
       <workItem from="1601433670649" duration="4502000" />
-      <workItem from="1601450430388" duration="1200000" />
+      <workItem from="1601450430388" duration="16502000" />
+      <workItem from="1601511199309" duration="28884000" />
     </task>
     <task id="LOCAL-00001" summary="updated home view">
       <created>1600254194237</created>
@@ -609,7 +650,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147191000" />
+    <option name="totallyTimeSpent" value="191377000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -624,12 +665,12 @@
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24048583" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26153848" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.0" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -637,7 +678,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.2931174" side_tool="true" weight="0.3291815" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.7068826" visible="true" weight="0.0" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.7068826" visible="true" weight="0.22735347" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -676,185 +717,10 @@
     <MESSAGE value="updated home view" />
     <MESSAGE value="shop page done" />
     <MESSAGE value="shop page changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="shop page changes" />
+    <MESSAGE value="multiple categories" />
+    <option name="LAST_COMMIT_MESSAGE" value="multiple categories" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.env.example" />
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/avored/review/database/migrations/2017_03_29_000001_avored_review_schema.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-377" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ViewModels/Account/EditViewModel.php" />
-    <entry file="file://$PROJECT_DIR$/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="58" column="31" lean-forward="true" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/passport/database/migrations/2016_06_01_000004_create_oauth_clients_table.php" />
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_09_21_003425_alter_user_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/avored/demodata/database/migrations/2017_03_29_000000_avored_demo_data_schema.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="17" selection-start-line="6" selection-start-column="4" selection-end-line="20" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/database/migrations/2017_03_29_000000_avored_framework_schema_3_1_3.php" />
-    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/database/migrations/2017_03_29_000000_avored_framework_schema.php" />
-    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/views/admin.blade.php" />
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/product/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/components/ProductPage.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="82" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/account/dashboard.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/account/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/account/order/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/cart/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/avored.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="57" column="8" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/nav.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/home1.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/partials/nav.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/partials/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1751">
-          <caret line="103" column="16" selection-start-line="103" selection-start-column="16" selection-end-line="103" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ShopController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="28" lean-forward="true" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="23" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/App.vue">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="30" column="71" selection-start-line="30" selection-start-column="71" selection-end-line="30" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/shop/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -877,41 +743,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/product/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/components/ShopPage.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="185" column="109" selection-start-line="185" selection-start-column="109" selection-end-line="185" selection-end-column="109" />
-          <folding>
-            <element signature="n#table#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#style#0;n#th#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#table#1;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#table#2;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#table#3;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#style#0;n#h4#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#h4#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/product/_fields.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="44" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/src/Catalog/Controllers/ProductController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5151">
-          <caret line="323" column="5" selection-start-line="323" selection-start-column="5" selection-end-line="323" selection-end-column="5" />
+        <state relative-caret-position="287">
+          <caret line="111" column="25" selection-start-line="111" selection-start-column="25" selection-end-line="111" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -935,10 +770,286 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/property/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="56" lean-forward="true" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/property/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/property/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/attribute/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/property/_fields.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/src/Menu/MenuBuilder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/vendor/avored/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="1" column="1130600" selection-start-line="1" selection-start-column="1130600" selection-end-line="1" selection-end-column="1130600" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/src/Menu/MenuItem.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/src/Database/Repository/CurrencyRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="80" column="14" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/src/Order/Controllers/OrderCommentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/src/Order/Controllers/OrderController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-646">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/attribute/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Contracts/Pagination/LengthAwarePaginator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/views/partials/sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="45" lean-forward="true" selection-start-column="45" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/components/catalog/product/ProductTable.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="33" column="15" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/app1.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/views/layouts/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-781">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/src/Database/Contracts/ProductModelInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="59" column="19" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/src/Genre/Controllers/GenreController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#54#88#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/src/System/ViewComposers/LayoutComposer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="31" column="70" selection-start-line="31" selection-start-column="70" selection-end-line="31" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/product/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="47" column="54" selection-start-line="47" selection-start-column="54" selection-end-line="47" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/product/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/product/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-290" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/views/genre/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/views/genre/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/database/migrations/2017_03_29_000000_avored_framework_schema.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="234" selection-start-line="234" selection-end-line="234" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="33" column="51" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="51" />
+          <folding>
+            <element signature="e#7#38#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/src/Database/Models/AttributeDropdownOption.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/src/Database/Models/Address.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/src/Database/Models/Customer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/js/modules/system/components/forms/AvoRedInput.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="35" column="8" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/src/Database/Models/Attribute.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-357" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/src/Database/Models/Book.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/src/Database/Models/Genre.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/src/Database/Models/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="64" column="36" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/src/Catalog/Controllers/ProductController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="342" column="7" selection-start-line="342" selection-start-column="7" selection-end-line="342" selection-end-column="7" />
+          <folding>
+            <element signature="e#56#98#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/modules/system/components/forms/AvoRedSelect.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/product/_fields.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-378">
+          <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
         </state>
       </provider>
     </entry>

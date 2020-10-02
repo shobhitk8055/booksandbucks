@@ -2,6 +2,8 @@
 
 namespace AvoRed\Framework\Catalog\Controllers;
 
+use AvoRed\Framework\Database\Models\Book;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -123,8 +125,11 @@ class ProductController
     public function create()
     {
         $typeOptions = Product::PRODUCT_TYPES;
+        $categoryOptions = $this->categoryRepository->options();
 
-        return view('avored::catalog.product.create')
+        return view('avored::catalog.product.create',[
+            'categoryOptions'=>$categoryOptions
+        ])
             ->with(compact('typeOptions'));
     }
 
@@ -136,6 +141,7 @@ class ProductController
     public function store(ProductRequest $request)
     {
         $product = $this->productRepository->create($request->all());
+        $this->saveProductCategory($product, $request);
 
         return redirect()->route('admin.product.edit', ['product' => $product->id])
             ->with('successNotification', __(
@@ -152,16 +158,23 @@ class ProductController
     public function edit(Product $product)
     {
         $tabs = Tab::get('catalog.product');
-
+        $isBook = $product->categories()->where('name','book')->count();
         $product->images;
-
+        $selectedCategory = "book";
+        $genreOptions = DB::table('genres')->pluck('name','id');
+        $genres = DB::table('genres')->get();
         $typeOptions = Product::PRODUCT_TYPES;
         $categoryOptions = $this->categoryRepository->options();
         $properties = $this->propertyRepository->allPropertyToUseInProduct();
         $attributes = $this->attributeRepository->all();
+        $bookTypeOptions = (object) ['hardCover'=>'Hard Cover','audioBook'=>'Audio Book','eBook'=>'eBook'];
 
         return view('avored::catalog.product.edit')
-            ->with(compact('product', 'categoryOptions', 'typeOptions', 'properties', 'attributes', 'tabs'));
+            ->with(compact('product', 'categoryOptions',
+                                    'typeOptions', 'properties',
+                                    'attributes', 'tabs', 'genreOptions',
+                                    'selectedCategory', 'isBook','bookTypeOptions'
+                ));
     }
 
     /**
@@ -172,9 +185,10 @@ class ProductController
      */
     public function update(ProductRequest $request, Product $product)
     {
-//        dd($request->all());
         $product->update($request->all());
-        $this->saveProductCategory($product, $request);
+        if ($request->isBook){
+            $this->saveBook($product, $request);
+        }
         $this->saveProductImages($product, $request);
 //        $this->saveProductProperty($product, $request);
 
@@ -305,6 +319,7 @@ class ProductController
             ->json(['success' => true, 'message' => __('avored::catalog.product.variation_create_msg')]);
     }
 
+
     /**
      * Save Product Category.
      * @param \AvoRed\Framework\Database\Models\Product $product
@@ -313,9 +328,6 @@ class ProductController
      */
     private function saveProductCategory(Product $product, $request)
     {
-//        if ($request->get('category') !== null){
-//            $product->categories()->sync($request->get('category'));
-//        }
         $categories = $request->get('category');
         $category = array_slice($categories,1);
         if ($category !== null && count($category) > 0) {
@@ -323,6 +335,58 @@ class ProductController
         }
     }
 
+    /**
+     * Save Product Genre.
+     * @param \AvoRed\Framework\Database\Models\Product $product
+     * @param \AvoRed\Framework\Catalog\Requests\ProductRequest $request
+     * @return void
+     */
+    private function saveBook(Product $product, $request)
+    {
+        $allGenres = $request->get('genre');
+        $genres = array_slice($allGenres,1);
+        if ($product->book_id === null){
+            $book = Book::create([
+                'title'=>$request->name,
+                'subtitle'=>$request->subtitle,
+                'number_of_pages'=>$request->number_of_pages,
+                'book_type'=>$request->book_type,
+                'author'=>$request->author,
+                'isbn_13'=>$request->isbn_13,
+            ]);
+            $bookId = $book->id;
+            $product->book_id = $bookId;
+            $product->save();
+            if ($genres !== null && count($genres) > 0) {
+                foreach ($genres as $genre) {
+                    DB::table('book_genre')->insert([
+                        'genre_id'=>$genre,
+                        'book_id'=>$bookId
+                    ]);
+                }
+            }
+        } else{
+            Book::find($product->book_id)->update([
+                'title'=>$request->name,
+                'subtitle'=>$request->subtitle,
+                'number_of_pages'=>$request->number_of_pages,
+                'book_type'=>$request->book_type,
+                'author'=>$request->author,
+                'isbn_13'=>$request->isbn_13,
+            ]);
+            if ($genres !== null && count($genres) > 0) {
+                foreach ($genres as $genre) {
+                    $genreExists = DB::table('book_genre')->where('book_id',$product->book_id)->where('genre_id',$genre)->count();
+                    if (!$genreExists){
+                        DB::table('book_genre')->insert([
+                            'genre_id'=>$genre,
+                            'book_id'=>$product->book_id
+                        ]);
+                    }
+                }
+            }
+        }
+    }
 
     /**
      * Save Product Property.

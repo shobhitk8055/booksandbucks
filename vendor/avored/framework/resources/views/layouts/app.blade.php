@@ -13,10 +13,11 @@
     <!-- Styles -->
     <link href="{{ asset('vendor/avored/css/app.css') }}" rel="stylesheet">
 
-{{--@if(file_exists(public_path('mix-manifest.json')))--}}
+
+    {{--@if(file_exists(public_path('mix-manifest.json')))--}}
         {{--<link href="{{ mix('vendor/avored/css/app.css') }}" rel="stylesheet">--}}
     {{--@else--}}
-        {{--<link href="{{ asset('vendor/avored/css/app.css') }}" rel="stylesheet">--}}
+{{--        <link href="{{ asset('vendor/avored/css/app.css') }}" rel="stylesheet">--}}
     {{--@endif--}}
 </head>
 
@@ -61,7 +62,7 @@
     {{--@if(file_exists(public_path('mix-manifest.json')))--}}
         {{--<script src="{{ mix('vendor/avored/js/avored.js') }}"></script>--}}
     {{--@else--}}
-        {{--<script src="{{ asset('vendor/avored/js/avored.js') }}"></script>--}}
+        <script src="{{ asset('vendor/avored/js/avored.js') }}"></script>
     {{--@endif--}}
     
     {{-- <script src="{{ asset('vendor/avored/cash-on-delivery/js/cash-on-delivery.js') }}"></script> --}}

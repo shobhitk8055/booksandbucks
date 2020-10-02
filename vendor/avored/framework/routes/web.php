@@ -51,13 +51,25 @@ Route::middleware(['web', 'admin.auth:admin', 'permission'])
     ->namespace('AvoRed\Framework')
     ->name('admin.')
     ->group(function () {
+        Route::get('genre', 'Genre\Controllers\GenreController@index')
+            ->name('genre.index');
+
+        Route::get('genre/create', 'Genre\Controllers\GenreController@create')
+            ->name('genre.create');
+
+        Route::post('genre/store', 'Genre\Controllers\GenreController@store')
+            ->name('genre.store');
+
         Route::get('', [\AvoRed\Framework\System\Controllers\DashboardController::class, 'index'])
             ->name('dashboard');
 
         Route::get('configuration', 'System\Controllers\ConfigurationController@index')
             ->name('configuration.index');
+
         Route::post('configuration', [\AvoRed\Framework\System\Controllers\ConfigurationController::class, 'store'])
             ->name('configuration.store');
+
+
 
         Route::post('attribute/upload', [\AvoRed\Framework\Catalog\Controllers\AttributeController::class, 'upload'])
             ->name('attribute.upload');

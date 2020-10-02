@@ -61,6 +61,11 @@ class Product extends BaseModel
         return $this->belongsToMany(Category::class);
     }
 
+    public function book(){
+        return $this->belongsTo(Book::class);
+
+    }
+
     /**
      * Get the Price of the Product.
      * @param bool $format

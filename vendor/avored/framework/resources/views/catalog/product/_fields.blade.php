@@ -27,47 +27,77 @@
                 </div>
             </div>
         </div>
-    
-        <div class="flex mt-3 items-center">
-            <div class="w-1/2">
-                <div class="mt-3">
-                    <avored-select
-                        label-text="{{ __('avored::system.fields.category') }}"
-                        field-name="category[]"
-                        :multiple=true
-                        error-text="{{ $errors->first('category') }}"
-                        :options="{{ json_encode($categoryOptions) }}"
-                        :value="{{ $product->categories ?  json_encode($product->categories->pluck('id')->toArray()) : '' }}"
-                    >
-                    </avored-select>
 
-                    {{--<avored-select--}}
-                            {{--label-text="{{ __('avored::system.fields.category') }}"--}}
-                            {{--field-name="category"--}}
-                            {{--:options="{{ json_encode($categoryOptions) }}"--}}
-                    {{-->--}}
-                    {{--</avored-select>--}}
+        @if($isBook)
+            <div class="flex mt-3 items-center">
+                <div class="w-1/2">
+                    <div class="mt-3">
+                            <avored-select
+                                    label-text="Genre"
+                                    field-name="genre[]"
+                                    :multiple=true
+                                    error-text="{{ $errors->first('genre') }}"
+                                    :options="{{ json_encode($genreOptions) }}"
+                            >
+                            </avored-select>
+                        </div>
+                </div>
+                <div class="w-1/2 ml-3">
+                    <div class="mt-3">
+                        <avored-select
+                                label-text="Book Type"
+                                field-name="book_type"
+                                error-text="{{ $errors->first('book_type') }}"
+                                :options="{{ json_encode($bookTypeOptions) }}"
+                                init-value="{{$product->book->book_type}}"
+                        >
+                        </avored-select>
+                        </div>
                 </div>
             </div>
-            <div class="w-1/2 ml-3">
-                <div class="mt-3">
-                    <avored-select
-                        label-text="{{ __('avored::system.fields.type') }}"
-                        field-name="type"
-                        :disabled="true"
-                        error-text="{{ $errors->first('type') }}"
-                        :options="{{ json_encode($typeOptions) }}"
-                        init-value="{{ $product->type ?? '' }}"
+            <div class="flex items-center">
+                <div class="w-1/2">
+                    <avored-input
+                            label-text="Subtitle"
+                            field-name="subtitle"
+                            error-text="{{ $errors->first('subtitle') }}"
+                            init-value="{{$product->book->subtitle}}"
                     >
-                    </avored-select>
-
-                    
-                    <input name="type" v-model="type" type="hidden" />
+                    </avored-input>
+                </div>
+                <div class="w-1/2 ml-3">
+                    <avored-input
+                            label-text="Number of pages"
+                            field-name="number_of_pages"
+                            input-type="number"
+                            error-text="{{ $errors->first('subtitle') }}"
+                            init-value="{{$product->book->number_of_pages}}"
+                    >
+                    </avored-input>
                 </div>
             </div>
-        </div>
-
-
+            <div class="flex mt-3 items-center">
+                <div class="w-1/2">
+                    <avored-input
+                            label-text="Author"
+                            field-name="author"
+                            error-text="{{ $errors->first('author') }}"
+                            init-value="{{$product->book->author}}"
+                    >
+                    </avored-input>
+                </div>
+                <div class="w-1/2 ml-3">
+                    <avored-input
+                            label-text="ISBN 13"
+                            field-name="isbn_13"
+                            error-text="{{ $errors->first('isbn_13') }}"
+                            init-value="{{$product->book->isbn_13}}"
+                    >
+                    </avored-input>
+                </div>
+            </div>
+            @endif
+            <input type="hidden" name="isBook" value="{{$isBook}}">
         <div class="flex mt-3 w-full">
             <div class="w-1/2">
                 <avored-input

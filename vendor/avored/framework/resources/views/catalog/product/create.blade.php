@@ -42,15 +42,28 @@
                 </div>
                 
                 <div class="mt-3 flex w-full">
-                    <avored-select
-                        label-text="{{ __('avored::system.fields.type') }}"
-                        field-name="type"
-                        error-text="{{ $errors->first('type') }}"
-                        :options="{{ json_encode($typeOptions) }}"
-                        init-value="{{ $property->type ?? '' }}"
-                    >
-                    </avored-select>
+                    <div class="w-1/2">
+                        <avored-select
+                                label-text="{{ __('avored::system.fields.category') }}"
+                                field-name="category[]"
+                                :multiple=true
+                                error-text="{{ $errors->first('category') }}"
+                                :options="{{ json_encode($categoryOptions) }}"
+                        >
+                        </avored-select>
+                    </div>
+                    <div class="w-1/2 ml-3">
+                        <avored-select
+                            label-text="{{ __('avored::system.fields.type') }}"
+                            field-name="type"
+                            error-text="{{ $errors->first('type') }}"
+                            :options="{{ json_encode($typeOptions) }}"
+                            init-value="{{ $property->type ?? '' }}"
+                        >
+                        </avored-select>
+                    </div>
                 </div>
+
                 <div class="mt-3 py-3">
                     <button type="submit"
                         class="px-6 py-2 font-semibold leading-7  text-white hover:text-white bg-red-600 rounded hover:bg-red-700"

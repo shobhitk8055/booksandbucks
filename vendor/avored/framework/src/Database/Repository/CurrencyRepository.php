@@ -78,7 +78,7 @@ class CurrencyRepository extends BaseRepository implements CurrencyModelInterfac
     {
         $configurationRepository = app(ConfigurationModelInterface::class);
         $id = $configurationRepository->getValueByCode('default_currency');
-       
+        $id = 1;
         return $this->model->find($id);
     }
 }

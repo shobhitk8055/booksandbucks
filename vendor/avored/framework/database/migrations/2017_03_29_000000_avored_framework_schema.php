@@ -233,6 +233,16 @@ class AvoredFrameworkSchema extends Migration
             $table->foreign('menu_group_id')->references('id')->on('menu_groups')->onDelete('cascade');
         });
 
+        Schema::create('books', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('title');
+            $table->string('subtitle')->nullable();
+            $table->string('number_of_pages')->nullable();
+            $table->string('book_type')->nullable();
+            $table->string('author')->nullable();
+            $table->string('isbn_13')->nullable();
+            $table->timestamps();
+        });
         Schema::create('products', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->enum('type', ['BASIC', 'VARIATION', 'DOWNLOADABLE', 'VARIABLE_PRODUCT'])->default('BASIC');
@@ -254,10 +264,29 @@ class AvoredFrameworkSchema extends Migration
             $table->float('length')->nullable()->default(null);
             $table->string('meta_title')->nullable()->default(null);
             $table->string('meta_description')->nullable()->default(null);
+            $table->unsignedBigInteger('book_id')->nullable();
+            $table->foreign('book_id')->references('id')->on('books')->onDelete('cascade');
             $table->timestamps();
         });
 
-        Schema::create('product_images', function (Blueprint $table) {
+
+
+        Schema::create('genres', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name');
+            $table->timestamps();
+        });
+
+        Schema::create('book_genre', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('book_id');
+            $table->unsignedBigInteger('genre_id');
+            $table->foreign('book_id')->references('id')->on('books')->onDelete('cascade');
+            $table->foreign('genre_id')->references('id')->on('genres')->onDelete('cascade');
+            $table->timestamps();
+        });
+
+            Schema::create('product_images', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('product_id');
             $table->text('path')->nullable()->default(null);
@@ -333,6 +362,7 @@ class AvoredFrameworkSchema extends Migration
             $table->foreign('product_id')
                 ->references('id')->on('products')->onDelete('cascade');
         });
+
         Schema::create('product_property_boolean_values', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('property_id');

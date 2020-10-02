@@ -19,12 +19,26 @@ class LayoutComposer
         $routeName = Route::currentRouteName();
 
         [$currentOpenKey, $currentMenuItemKey] = Menu::getMenuItemFromRouteName($routeName);
-
+        $genres = (object) ['name'=>'Genres',
+            'icon'=>'ticket',
+            'url'=>'#',
+            'submenus'=> [
+                'all_genre'=>[
+                    'name'=>'All Genre',
+                    'url'=>'http:\/\/127.0.0.1:8000\admin\genre'
+                ],
+                'add_genre'=>[
+                    'name'=>'Add Genre',
+                    'url'=>'http:\/\/127.0.0.1:8000\admin\genre\create'
+                ]
+            ]
+        ];
         
         $adminMenus = Menu::adminMenus();
         // dd($adminMenus);
         $view->with('adminMenus', $adminMenus)
             ->with('currentOpenKey', $currentOpenKey)
+            ->with('genres', $genres)
             ->with('currentMenuItemKey', $currentMenuItemKey);
     }
 }

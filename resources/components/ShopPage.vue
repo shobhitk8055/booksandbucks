@@ -108,7 +108,8 @@
             </div>
             <div class="col-xl-8 col-lg-4 col-md-6" >
                 <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6" v-for="product in getProducts()">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6"
+                         v-for="product in getProducts()">
                         <div class="single-popular-items mb-50 text-center">
                             <div class="popular-img">
                                 <img v-bind:src="getImageURL(product.id)" alt="">

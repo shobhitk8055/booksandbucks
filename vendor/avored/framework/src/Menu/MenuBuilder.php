@@ -80,7 +80,6 @@ class MenuBuilder
                 }
             }
         }
-
         return [$currentOpenKey, $currentMenuItemKey];
     }
 
@@ -118,12 +117,9 @@ class MenuBuilder
     {
         $adminMenus = $this->all(true);
 
-
         $result = $adminMenus->map(function ($item, $index) {
             $routeName = $item->route();
             if ($item->hasSubMenu()) {
-                
-                
                 $subMenus = collect($item->subMenu)->map(function ($item) {
                     $routeName = $item->route();
                     return [

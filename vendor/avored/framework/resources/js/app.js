@@ -31,7 +31,8 @@ Vue.component('attribute-save', require('../components/catalog/attribute/Attribu
 Vue.component('property-table', require('../components/catalog/property/PropertyTable.vue').default)
 Vue.component('property-save', require('../components/catalog/property/PropertySave.vue').default)
 
-Vue.component('product-table', require('../components/catalog/product/ProductTable.vue').default)
+Vue.component('' +
+    'product-table', require('../components/catalog/product/ProductTable.vue').default)
 Vue.component('product-save', require('../components/catalog/product/ProductSave.vue').default)
 
 Vue.component('currency-table', require('../components/system/currency/CurrencyTable.vue').default)
