@@ -36,7 +36,7 @@
                                 <li><a href="{{ route('shop') }}">Shop</a></li>
                                 <li><a href="{{ route('about') }}">About</a></li>
                                 <li class="hot"><a href="#">Categories</a>
-                                    <ul class="submenu ">
+                                    <ul class="submenu">
                                         <li><a href="shop.html">Category 1</a></li>
                                         <li><a href="product_details.html">Category 2</a></li>
                                     </ul>
@@ -47,7 +47,6 @@
 
                                 @auth('customer')
                                     <li> <a href="{{ route('account.dashboard') }}"><span class="flaticon-user"style="color: red;"></span></a></li>
-
 
                                     @else
                                     <li><a href="{{ route('login') }}">Login </a></li>
@@ -61,12 +60,7 @@
 
                             </ul>
 
-
-
                         </nav>
-
-
-
 
                     </div>
                     <!-- Header Right -->
@@ -79,7 +73,6 @@
                 </div>
 
             </div>
-
 
 
             <div class="input-group md-form form-sm form-1 pl-0" style="padding-bottom: 10px; padding-top: 10px;">

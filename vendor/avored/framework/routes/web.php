@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 
 $baseAdminUrl = config('avored.admin_url');
 
+
 Route::middleware(['web'])
     ->prefix($baseAdminUrl)
     ->namespace('AvoRed\\Framework')

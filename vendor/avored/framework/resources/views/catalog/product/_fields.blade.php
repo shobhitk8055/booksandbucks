@@ -49,7 +49,7 @@
                                 field-name="book_type"
                                 error-text="{{ $errors->first('book_type') }}"
                                 :options="{{ json_encode($bookTypeOptions) }}"
-                                init-value="{{$product->book->book_type}}"
+                                init-value="{{$product->book->book_type ?? ""}}"
                         >
                         </avored-select>
                         </div>
@@ -61,7 +61,7 @@
                             label-text="Subtitle"
                             field-name="subtitle"
                             error-text="{{ $errors->first('subtitle') }}"
-                            init-value="{{$product->book->subtitle}}"
+                            init-value="{{$product->book->subtitle ?? ""}}"
                     >
                     </avored-input>
                 </div>
@@ -71,7 +71,7 @@
                             field-name="number_of_pages"
                             input-type="number"
                             error-text="{{ $errors->first('subtitle') }}"
-                            init-value="{{$product->book->number_of_pages}}"
+                            init-value="{{$product->book->number_of_pages ?? ""}}"
                     >
                     </avored-input>
                 </div>
@@ -82,7 +82,7 @@
                             label-text="Author"
                             field-name="author"
                             error-text="{{ $errors->first('author') }}"
-                            init-value="{{$product->book->author}}"
+                            init-value="{{$product->book->author ?? ""}}"
                     >
                     </avored-input>
                 </div>
@@ -91,7 +91,7 @@
                             label-text="ISBN 13"
                             field-name="isbn_13"
                             error-text="{{ $errors->first('isbn_13') }}"
-                            init-value="{{$product->book->isbn_13}}"
+                            init-value="{{$product->book->isbn_13 ?? ""}}"
                     >
                     </avored-input>
                 </div>
