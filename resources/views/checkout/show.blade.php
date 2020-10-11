@@ -22,10 +22,12 @@
     <div class="container mx-auto">
     <h1 class="text-lg text-red-700 font-semibold my-5">{{ __('avored.checkout') }} {{ __('avored.page') }}</h1>
     <form @submit.prevent="handleSubmit" id="checkout-form"  method="post" action="{{ route('order.place') }}">
-      @csrf          
+      @csrf
+        @include('checkout.cards.cart-items')
+
       <div class="flex">
         <div class="w-1/2">
-              @include('checkout.cards.personal')   
+              @include('checkout.cards.personal')
           
               @include('checkout.cards.shipping-address')
               @include('checkout.cards.billing-address')
@@ -34,8 +36,7 @@
         <div class="w-1/2 ml-3">
               @include('checkout.cards.shipping-option')   
               @include('checkout.cards.payment-option')   
-              @include('checkout.cards.cart-items')   
-              
+
               <button type="submit" class="px-3 py-1 bg-red-500 text-white text-sm font-semibold rounded">
                   {{ __('avored.btn.place_order') }}
               </button>

@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="11308df2-4c9a-48bf-8274-dc8e8915ff28" name="Default Changelist" comment="Added Books and Genres Table">
-      <change afterPath="$PROJECT_DIR$/public/assets/img/hero/slider.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/hero/slider2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/mdb.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/app-self.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/partials/footer-self.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/partials/header-self.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/partials/slider-self.blade.php" afterDir="false" />
+    <list default="true" id="11308df2-4c9a-48bf-8274-dc8e8915ff28" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/checkout/checkout-self.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home1.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home1.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CheckoutController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CheckoutController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/checkout/cards/cart-items.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/checkout/cards/cart-items.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/checkout/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/checkout/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app-self.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app-self.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app1.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app1.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/header-self.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/header-self.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/product/show1.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/product/show1.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/server.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/product/_fields.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/product/_fields.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/avored/framework/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/avored/framework/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,22 +62,24 @@
     <session id="-6176574">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="24" />
+          <entry key="project.closed" value="27" />
           <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.1" value="8" />
+          <entry key="project.open.time.1" value="9" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.14" value="2" />
           <entry key="project.open.time.15" value="2" />
+          <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.2" value="3" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.27" value="1" />
+          <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="28" />
+          <entry key="project.opened" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -89,19 +90,19 @@
           <entry key="jpg" value="1" />
           <entry key="js" value="18" />
           <entry key="json" value="3" />
-          <entry key="php" value="288" />
+          <entry key="php" value="315" />
           <entry key="scss" value="3" />
           <entry key="vue" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Blade" value="201" />
+          <entry key="Blade" value="222" />
           <entry key="CSS" value="1" />
           <entry key="Image" value="1" />
           <entry key="JSON" value="3" />
           <entry key="JavaScript" value="18" />
-          <entry key="PHP" value="87" />
+          <entry key="PHP" value="93" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="SCSS" value="3" />
           <entry key="Vue.js" value="24" />
@@ -111,18 +112,18 @@
         <counts>
           <entry key="env" value="13" />
           <entry key="js" value="61" />
-          <entry key="php" value="11131" />
+          <entry key="php" value="14464" />
           <entry key="scss" value="1" />
-          <entry key="txt" value="218" />
+          <entry key="txt" value="241" />
           <entry key="vue" value="3851" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="7235" />
+          <entry key="Blade" value="10339" />
           <entry key="JavaScript" value="62" />
-          <entry key="PHP" value="3895" />
-          <entry key="PLAIN_TEXT" value="231" />
+          <entry key="PHP" value="4124" />
+          <entry key="PLAIN_TEXT" value="254" />
           <entry key="SCSS" value="1" />
           <entry key="Vue.js" value="3851" />
         </counts>
@@ -135,40 +136,67 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/modules/system/components/forms/AvoRedSelect.vue">
+        <entry file="file://$PROJECT_DIR$/resources/views/checkout/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+            <state relative-caret-position="209">
+              <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="41" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/avored/framework/src/Catalog/Controllers/ProductController.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/checkout/checkout-self.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5440">
-              <caret line="342" column="7" selection-start-line="342" selection-start-column="7" selection-end-line="342" selection-end-column="7" />
+            <state relative-caret-position="2192">
+              <caret line="184" column="76" selection-start-line="184" selection-start-column="76" selection-end-line="184" selection-end-column="76" />
               <folding>
-                <element signature="e#56#98#0#PHP" expanded="true" />
+                <element signature="e#206#323#0#HTML" expanded="true" />
+                <element signature="e#352#399#0#HTML" expanded="true" />
+                <element signature="e#716#832#0#HTML" expanded="true" />
+                <element signature="e#988#1020#0#HTML" expanded="true" />
+                <element signature="e#2513#2536#0#HTML" expanded="true" />
+                <element signature="e#2488#2576#0#HTML" />
+                <element signature="e#3157#3220#0#HTML" expanded="true" />
+                <element signature="e#3250#3294#0#HTML" expanded="true" />
+                <element signature="e#3435#3458#0#HTML" expanded="true" />
+                <element signature="e#5417#5440#0#HTML" expanded="true" />
+                <element signature="e#7124#7148#0#HTML" expanded="true" />
+                <element signature="e#7575#7599#0#HTML" expanded="true" />
+                <element signature="e#7827#7870#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/avored/framework/src/Database/Models/Book.php">
+        <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/product/_fields.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+            <state relative-caret-position="1581">
+              <caret line="93" column="71" selection-start-line="93" selection-start-column="71" selection-end-line="93" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CheckoutController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
+              <folding>
+                <element signature="e#40#74#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/home1.blade.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OrderController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-646">
-              <caret line="61" column="42" lean-forward="true" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="42" />
+            <state relative-caret-position="306">
+              <caret line="69" column="53" selection-start-line="69" selection-start-column="46" selection-end-line="69" selection-end-column="53" />
+              <folding>
+                <element signature="e#40#68#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -176,44 +204,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/partials/footer-self.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1598">
-              <caret line="94" selection-start-line="94" selection-end-line="94" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/partials/header-self.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1241">
-              <caret line="73" column="6" selection-start-line="73" selection-start-column="6" selection-end-line="73" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/app-self.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2074">
-              <caret line="122" column="30" selection-start-line="122" selection-start-column="30" selection-end-line="122" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/partials/footer1.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="19" selection-end-line="93" selection-end-column="6" />
+            <state relative-caret-position="476">
+              <caret line="39" column="64" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -222,10 +214,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>category_product</find>
-      <find>avored-tabs</find>
-      <find>slot</find>
-      <find>avored-tab</find>
       <find>is_main_image</find>
       <find>create</find>
       <find>avored</find>
@@ -243,7 +231,6 @@
       <find>View</find>
       <find>product-table</find>
       <find>saveProductCategory</find>
-      <find>index</find>
       <find>edit</find>
       <find>avored-input</find>
       <find>saveProductGenre</find>
@@ -252,6 +239,11 @@
       <find>logo</find>
       <find>public</find>
       <find>Josefin Sans</find>
+      <find>cart</find>
+      <find>index</find>
+      <find>phone</find>
+      <find>Ord</find>
+      <find>cash</find>
     </findStrings>
     <replaceStrings>
       <replace>css</replace>
@@ -270,17 +262,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/category/edit.blade.php" />
-        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/category/index.blade.php" />
-        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/product/edit.blade.php" />
-        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/property/create.blade.php" />
-        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/property/edit.blade.php" />
-        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/property/index.blade.php" />
-        <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/product/cards/images.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" />
-        <option value="$PROJECT_DIR$/resources/js/app.js" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/nav.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ShopController.php" />
         <option value="$PROJECT_DIR$/resources/views/shop/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/head.blade.php" />
@@ -306,7 +287,6 @@
         <option value="$PROJECT_DIR$/vendor/avored/framework/src/Database/Models/Genre.php" />
         <option value="$PROJECT_DIR$/vendor/avored/framework/src/Database/Models/Book.php" />
         <option value="$PROJECT_DIR$/server.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/app1.blade.php" />
         <option value="$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/product/_fields.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/header2.blade.php" />
         <option value="$PROJECT_DIR$/vendor/avored/framework/routes/web.php" />
@@ -314,13 +294,25 @@
         <option value="$PROJECT_DIR$/resources/views/check.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/scss/_variables.scss" />
         <option value="$PROJECT_DIR$/resources/views/partials/header.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/partials/header-self.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/footer-self.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/app-self.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/slider-self.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/check2.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/home1.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/partials/header-self.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/app1.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/product/show-self.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" />
+        <option value="$PROJECT_DIR$/resources/views/product/show1.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/cart/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/checkout/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/checkout/cards/cart-items.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/app-self.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/CheckoutController.php" />
+        <option value="$PROJECT_DIR$/resources/views/checkout/checkout-self.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" />
       </list>
     </option>
   </component>
@@ -503,6 +495,19 @@
             <path>
               <item name="booksandbucks" type="b2602c69:ProjectViewProjectNode" />
               <item name="booksandbucks" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="booksandbucks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="booksandbucks" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="booksandbucks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="booksandbucks" type="462c0819:PsiDirectoryNode" />
               <item name="database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -527,6 +532,28 @@
               <item name="booksandbucks" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="booksandbucks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="booksandbucks" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="checkout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="booksandbucks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="booksandbucks" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="checkout" type="462c0819:PsiDirectoryNode" />
+              <item name="cards" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="booksandbucks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="booksandbucks" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="layouts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -535,6 +562,13 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="partials" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="booksandbucks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="booksandbucks" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="product" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="booksandbucks" type="b2602c69:ProjectViewProjectNode" />
@@ -598,6 +632,18 @@
               <item name="vendor" type="462c0819:PsiDirectoryNode" />
               <item name="avored" type="462c0819:PsiDirectoryNode" />
               <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="catalog" type="462c0819:PsiDirectoryNode" />
+              <item name="product" type="462c0819:PsiDirectoryNode" />
+              <item name="cards" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="booksandbucks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="booksandbucks" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="avored" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -626,7 +672,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="web&#9;FILE&#9;file://C:/laragon/www/booksandbucks/routes/web.php&#10;web.php&#9;FILE&#9;file://C:/laragon/www/booksandbucks/routes/web.php&#10;web.ph&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/avored/framework/routes/web.php&#10;AvoredSelect&#9;FILE&#9;file://C:/laragon/www/booksandbucks/resources/js/modules/system/components/forms/AvoRedSelect.vue&#10;AvoredInput&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/avored/framework/resources/js/modules/system/components/forms/AvoRedInput.vue&#10;Customer&#9;null&#9;null&#10;ProductC&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/avored/framework/src/Catalog/Controllers/ProductController.php&#10;Layout&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/avored/framework/src/System/ViewComposers/LayoutComposer.php&#10;web.]&#9;null&#9;null&#10;Genre&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/avored/framework/src/Genre/Controllers/GenreController.php&#10;LengthAwarePaginator&#9;null&#9;null&#10;ProductModelInterface&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/avored/framework/src/Database/Contracts/ProductModelInterface.php&#10;Product&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/avored/framework/src/Catalog/Controllers/ProductController.php&#10;routes&#9;FILE&#9;file://C:/laragon/www/booksandbucks/modules/avored/review/routes&#10;CurrencyRepository&#9;null&#9;null&#10;avored-menu&#9;null&#9;null&#10;Framework\Menu\Menu&#9;null&#9;null&#10;ProductController&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/avored/framework/src/Catalog/Controllers/ProductController.php&#10;Produc&#9;null&#9;null&#10;increase font&#9;ACTION&#9;EditorIncreaseFontSize&#10;images.&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/avored/framework/resources/views/catalog/product/cards/images.blade.php&#10;/Illuminate/Support/Arr.php&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/laravel/framework/src/Illuminate/Support/Arr.php&#10;functions/marshal_uri_from_sapi.php&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/laminas/laminas-diactoros/src/functions/marshal_uri_from_sapi.php&#10;Illuminate/Foundation/Http/Kernel.php&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&#10;vendor/avored/images&#9;FILE&#9;file://C:/laragon/www/booksandbucks/public/vendor/avored/images&#10;saveProductImages&#9;null&#9;null&#10;AvoRedTab&#9;FILE&#9;file://C:/laragon/www/booksandbucks/resources/js/modules/system/components/forms/AvoRedTab.vue&#10;AvoRedTabs&#9;FILE&#9;file://C:/laragon/www/booksandbucks/resources/js/modules/system/components/forms/AvoRedTabs.vue&#10;Controllers\ProductController.&#9;FILE&#9;file://C:/laragon/www/booksandbucks/app/Http/Controllers/ProductController.php&#10;resources/views/layouts/app.blade.php&#9;FILE&#9;file://C:/laragon/www/booksandbucks/resources/views/layouts/app.blade.php&#10;views/layouts/app.blade.php&#9;FILE&#9;file://C:/laragon/www/booksandbucks/resources/views/layouts/app.blade.php&#10;css/app.css&#9;FILE&#9;file://C:/laragon/www/booksandbucks/public/vendor/avored/css/app.css&#10;HomeController&#9;FILE&#9;file://C:/laragon/www/booksandbucks/app/Http/Controllers/HomeController.php&#10;CategoryPage.&#9;FILE&#9;file://C:/laragon/www/booksandbucks/resources/components/CategoryPage.vue&#10;\framework\src\Catalog\Controllers\ProductController&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/avored/framework/src/Catalog/Controllers/ProductController.php&#10;Controllers\ProductController&#9;null&#9;null&#10;Controllers\AttributeController&#9;null&#9;null&#10;illum&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/laravel/framework/src/Illuminate&#10;\Facades\Hash&#9;null&#9;null&#10;Hash&#9;null&#9;null&#10;Auth&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/laravel/framework/src/Illuminate/Support/Facades/Auth.php&#10;LoginController&#9;FILE&#9;file://C:/laragon/www/booksandbucks/app/Http/Controllers/Auth/LoginController.php&#10;Facades\Auth&#9;null&#9;null&#10;Support/Col&#9;null&#9;null&#10;Illuminate\Support\Facades\Auth&#9;null&#9;null&#10;Category&#9;null&#9;null&#10;create_oauth_clients_table&#9;FILE&#9;file://C:/laragon/www/laravel-ecommerce/vendor/laravel/passport/database/migrations/2016_06_01_000004_create_oauth_clients_table.php&#10;attribute&#9;FILE&#9;file://C:/laragon/www/laravel-ecommerce/public/storage/uploads/catalog/attributes&#10;User&#9;null&#9;null&#10;avored_review_schema&#9;FILE&#9;file://C:/laragon/www/laravel-ecommerce/modules/avored/review/database/migrations/2017_03_29_000001_avored_review_schema.php" />
+    <property name="SearchEverywhereHistoryKey" value="web.&#9;FILE&#9;file://C:/laragon/www/booksandbucks/routes/web.php&#10;web&#9;FILE&#9;file://C:/laragon/www/booksandbucks/routes/web.php&#10;checkou&#9;FILE&#9;file://C:/laragon/www/booksandbucks/resources/views/checkout/checkout-self.blade.php&#10;CheckoutC&#9;FILE&#9;file://C:/laragon/www/booksandbucks/app/Http/Controllers/CheckoutController.php&#10;web.php&#9;FILE&#9;file://C:/laragon/www/booksandbucks/routes/web.php&#10;Produ&#9;null&#9;null&#10;web.ph&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/avored/framework/routes/web.php&#10;AvoredSelect&#9;FILE&#9;file://C:/laragon/www/booksandbucks/resources/js/modules/system/components/forms/AvoRedSelect.vue&#10;AvoredInput&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/avored/framework/resources/js/modules/system/components/forms/AvoRedInput.vue&#10;Customer&#9;null&#9;null&#10;ProductC&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/avored/framework/src/Catalog/Controllers/ProductController.php&#10;Layout&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/avored/framework/src/System/ViewComposers/LayoutComposer.php&#10;web.]&#9;null&#9;null&#10;Genre&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/avored/framework/src/Genre/Controllers/GenreController.php&#10;LengthAwarePaginator&#9;null&#9;null&#10;ProductModelInterface&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/avored/framework/src/Database/Contracts/ProductModelInterface.php&#10;Product&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/avored/framework/src/Catalog/Controllers/ProductController.php&#10;routes&#9;FILE&#9;file://C:/laragon/www/booksandbucks/modules/avored/review/routes&#10;CurrencyRepository&#9;null&#9;null&#10;avored-menu&#9;null&#9;null&#10;Framework\Menu\Menu&#9;null&#9;null&#10;ProductController&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/avored/framework/src/Catalog/Controllers/ProductController.php&#10;Produc&#9;null&#9;null&#10;increase font&#9;ACTION&#9;EditorIncreaseFontSize&#10;images.&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/avored/framework/resources/views/catalog/product/cards/images.blade.php&#10;/Illuminate/Support/Arr.php&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/laravel/framework/src/Illuminate/Support/Arr.php&#10;functions/marshal_uri_from_sapi.php&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/laminas/laminas-diactoros/src/functions/marshal_uri_from_sapi.php&#10;Illuminate/Foundation/Http/Kernel.php&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&#10;vendor/avored/images&#9;FILE&#9;file://C:/laragon/www/booksandbucks/public/vendor/avored/images&#10;saveProductImages&#9;null&#9;null&#10;AvoRedTab&#9;FILE&#9;file://C:/laragon/www/booksandbucks/resources/js/modules/system/components/forms/AvoRedTab.vue&#10;AvoRedTabs&#9;FILE&#9;file://C:/laragon/www/booksandbucks/resources/js/modules/system/components/forms/AvoRedTabs.vue&#10;Controllers\ProductController.&#9;FILE&#9;file://C:/laragon/www/booksandbucks/app/Http/Controllers/ProductController.php&#10;resources/views/layouts/app.blade.php&#9;FILE&#9;file://C:/laragon/www/booksandbucks/resources/views/layouts/app.blade.php&#10;views/layouts/app.blade.php&#9;FILE&#9;file://C:/laragon/www/booksandbucks/resources/views/layouts/app.blade.php&#10;css/app.css&#9;FILE&#9;file://C:/laragon/www/booksandbucks/public/vendor/avored/css/app.css&#10;HomeController&#9;FILE&#9;file://C:/laragon/www/booksandbucks/app/Http/Controllers/HomeController.php&#10;CategoryPage.&#9;FILE&#9;file://C:/laragon/www/booksandbucks/resources/components/CategoryPage.vue&#10;\framework\src\Catalog\Controllers\ProductController&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/avored/framework/src/Catalog/Controllers/ProductController.php&#10;Controllers\ProductController&#9;null&#9;null&#10;Controllers\AttributeController&#9;null&#9;null&#10;illum&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/laravel/framework/src/Illuminate&#10;\Facades\Hash&#9;null&#9;null&#10;Hash&#9;null&#9;null&#10;Auth&#9;FILE&#9;file://C:/laragon/www/booksandbucks/vendor/laravel/framework/src/Illuminate/Support/Facades/Auth.php&#10;LoginController&#9;FILE&#9;file://C:/laragon/www/booksandbucks/app/Http/Controllers/Auth/LoginController.php&#10;Facades\Auth&#9;null&#9;null&#10;Support/Col&#9;null&#9;null&#10;Illuminate\Support\Facades\Auth&#9;null&#9;null&#10;Category&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
@@ -634,14 +680,15 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\booksandbucks\public\assets\img\hero" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\laragon\www\booksandbucks\resources\views\account" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\booksandbucks\resources\views\product" />
+      <recent name="C:\laragon\www\booksandbucks\public\assets\img\hero" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -695,7 +742,10 @@
       <workItem from="1602146417254" duration="14717000" />
       <workItem from="1602206467144" duration="2845000" />
       <workItem from="1602211183656" duration="1060000" />
-      <workItem from="1602230428576" duration="3411000" />
+      <workItem from="1602230428576" duration="4064000" />
+      <workItem from="1602247373507" duration="7743000" />
+      <workItem from="1602294779075" duration="36000" />
+      <workItem from="1602381759338" duration="20444000" />
     </task>
     <task id="LOCAL-00001" summary="updated home view">
       <created>1600254194237</created>
@@ -711,11 +761,18 @@
       <option name="project" value="LOCAL" />
       <updated>1601440609516</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Side drawer added">
+      <created>1602234451221</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1602234451221</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="229524000" />
+    <option name="totallyTimeSpent" value="258400000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -727,9 +784,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.87921846" visible="true" weight="0.24615385" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.87921846" visible="true" weight="0.2582996" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" sideWeight="0.120781526" side_tool="true" weight="0.22591093" />
@@ -741,8 +799,8 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.29473683" side_tool="true" weight="0.3285968" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.70526314" visible="true" weight="0.3285968" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.13603239" side_tool="true" weight="0.30550623" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.8639676" visible="true" weight="0.14564832" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -785,118 +843,10 @@
     <MESSAGE value="shop page changes" />
     <MESSAGE value="multiple categories" />
     <MESSAGE value="Added Books and Genres Table" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Books and Genres Table" />
+    <MESSAGE value="Side drawer added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Side drawer added" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/src/Order/Controllers/OrderCommentController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/src/Order/Controllers/OrderController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-646">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/attribute/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Contracts/Pagination/LengthAwarePaginator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/views/partials/sidebar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="45" lean-forward="true" selection-start-column="45" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/components/catalog/product/ProductTable.vue">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="33" column="15" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/views/layouts/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-781">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/src/Database/Contracts/ProductModelInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/src/Genre/Controllers/GenreController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/src/System/ViewComposers/LayoutComposer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="31" column="70" selection-start-line="31" selection-start-column="70" selection-end-line="31" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/product/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="47" column="54" selection-start-line="47" selection-start-column="54" selection-end-line="47" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/product/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/product/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-290" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/views/genre/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/views/genre/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/avored/framework/database/migrations/2017_03_29_000000_avored_framework_schema.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -997,13 +947,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/product/_fields.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1581">
-          <caret line="93" column="71" selection-start-line="93" selection-start-column="71" selection-end-line="93" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/nav.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1017,20 +960,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/partials/nav.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/partials/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app1.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" selection-start-line="22" selection-end-line="23" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/partials/slider-self.blade.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -1050,9 +979,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5440">
           <caret line="342" column="7" selection-start-line="342" selection-start-column="7" selection-end-line="342" selection-end-column="7" />
-          <folding>
-            <element signature="e#56#98#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1063,31 +989,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/home1.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1445">
-          <caret line="85" selection-start-line="85" selection-end-line="86" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/partials/footer-self.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1598">
           <caret line="94" selection-start-line="94" selection-end-line="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/partials/header-self.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="73" column="6" selection-start-line="73" selection-start-column="6" selection-end-line="73" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app-self.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2074">
-          <caret line="122" column="30" selection-start-line="122" selection-start-column="30" selection-end-line="122" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -1098,17 +1003,187 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/home1.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="255">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/home1.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/partials/header.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-646">
-          <caret line="61" column="42" lean-forward="true" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="42" />
+        <state relative-caret-position="241">
+          <caret line="51" column="70" selection-start-line="51" selection-start-column="49" selection-end-line="51" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/product/show-self.blade.php" />
+    <entry file="file://$PROJECT_DIR$/resources/views/partials/header-self.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="69" selection-start-line="30" selection-start-column="69" selection-end-line="30" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/product/show1.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="74" selection-start-line="29" selection-start-column="74" selection-end-line="29" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/cart/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" selection-start-column="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app-self.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app1.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" selection-start-line="19" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProductController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="42" column="66" selection-start-line="42" selection-start-column="66" selection-end-line="42" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" selection-start-line="23" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/checkout/cards/cart-items.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="42" column="75" lean-forward="true" selection-start-line="42" selection-start-column="56" selection-end-line="42" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="33" column="38" lean-forward="true" selection-start-line="25" selection-start-column="32" selection-end-line="33" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/checkout/cards/shipping-address.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-799">
+          <caret line="13" column="33" lean-forward="true" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/checkout/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="41" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/checkout/cards/billing-address.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1530" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/checkout/cards/personal.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="63" column="67" lean-forward="true" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/checkout/cards/shipping-option.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/checkout/cards/payment-option.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/product/cards/images.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="49" column="67" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/avored/framework/resources/views/catalog/product/_fields.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1581">
+          <caret line="93" column="71" selection-start-line="93" selection-start-column="71" selection-end-line="93" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CheckoutController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
+          <folding>
+            <element signature="e#40#74#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="39" column="64" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/checkout/checkout-self.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2192">
+          <caret line="184" column="76" selection-start-line="184" selection-start-column="76" selection-end-line="184" selection-end-column="76" />
+          <folding>
+            <element signature="e#206#323#0#HTML" expanded="true" />
+            <element signature="e#352#399#0#HTML" expanded="true" />
+            <element signature="e#716#832#0#HTML" expanded="true" />
+            <element signature="e#988#1020#0#HTML" expanded="true" />
+            <element signature="e#2513#2536#0#HTML" expanded="true" />
+            <element signature="e#2488#2576#0#HTML" />
+            <element signature="e#3157#3220#0#HTML" expanded="true" />
+            <element signature="e#3250#3294#0#HTML" expanded="true" />
+            <element signature="e#3435#3458#0#HTML" expanded="true" />
+            <element signature="e#5417#5440#0#HTML" expanded="true" />
+            <element signature="e#7124#7148#0#HTML" expanded="true" />
+            <element signature="e#7575#7599#0#HTML" expanded="true" />
+            <element signature="e#7827#7870#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OrderController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="69" column="53" selection-start-line="69" selection-start-column="46" selection-end-line="69" selection-end-column="53" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -27,11 +27,11 @@
 
 <body>
 
-@include('partials.header')
+{{--@include('partials.header')--}}
 
 @yield('content')
 
-@include('partials.footer1')
+{{--@include('partials.footer1')--}}
 
 <!-- JS here -->
 <script src="{{asset('assets/js/vendor/modernizr-3.5.0.min.js')}}"></script>

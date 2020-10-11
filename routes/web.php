@@ -18,8 +18,8 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/{any}', [SpaController::class, 'index'])->where('any', '.*');
 
 Auth::routes();
-Route::get('b', function (){
-});
+Route::get('b', 'CheckoutController@b');
+Route::post('ba', 'CheckoutController@bp');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('', 'HomeController@index')->name('home');
 Route::get('shop', 'ShopController@index')->name('shop');

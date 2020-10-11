@@ -27,19 +27,24 @@
                     <span style="color: red;" class="navbar-toggler-icon"></span>
                 </button>
             </div>
-            <div class="col-3">
-                <img style="max-width: 316%;" class="logo-img" src="assets/img/logo/logo.png">
+            <div class="col-3"><a href="/">
+                <img style="max-width: 316%;" class="logo-img" src="/assets/img/logo/logo.png"></a>
             </div>
-            <div class="col-1 offset-4 to-show">
-                <i class="fas fa-search" style="font-size: 25px; color: red;"></i>
+            <div class="col-1 offset-3 to-show"><a>
+                    <i class="fas fa-search" style="font-size: 25px; color: red;"></i></a>
             </div>
-            <div class="col-1 ml-2 to-show">
-                <i class="fas fa-shopping-cart" style="font-size: 25px; color: red;"></i>
+            <div class="col-1 ml-2 to-show"><a href="{{ route('cart.show') }}">
+                <i class="fas fa-shopping-cart" style="font-size: 25px; color: red;"></i></a>
             </div>
-            <div class="col-1 ml-2 to-show">
-                <i class="far fa-user" style="font-size: 25px; color: red;"></i>
+            @auth('customer')
+            <div class="col-1 ml-2 to-show"><a href="{{ route('account.dashboard') }}">
+                    <i class="far fa-user" style="font-size: 25px; color: red;"></i></a>
             </div>
-
+            @else
+            <div class="col-1 ml-2 to-show"><a href="{{ route('login') }}">
+                    <i class="far fa-user" style="font-size: 25px; color: red;"></i></a>
+            </div>
+            @endauth
             <div class="col-4 mt-2 to-hide" style="font-size: 15px; font-family: 'Josefin Sans', sans-serif; font-weight: 600;">
                 <div class="row">
                     <div class="col-3">
@@ -64,9 +69,13 @@
                     </div>
                 </div>
             </div>
-            <div class="col-1 to-hide">
-                <i class="fas fa-shopping-cart mt-2" style="font-size: 25px; color: #E12323;"></i>
-                <i class="far fa-user mt-2 ml-3" style="font-size: 25px; color: #E12323;"></i>
+            <div class="col-2 to-hide">
+                <a style="width: max-content;" href="{{ route('cart.show') }}"><i class="fas fa-shopping-cart mt-2" style="font-size: 25px; color: #E12323;"></i></a>
+                @auth('customer')
+                <a  style="width: max-content;" href="{{ route('account.dashboard') }}"><i class="far fa-user mt-2 ml-3" style="font-size: 25px; color: #E12323;"></i></a>
+                @else
+                <a  style="width: max-content;" href="{{ route('login') }}"><i class="far fa-user mt-2 ml-3" style="font-size: 25px; color: #E12323;"></i></a>
+                @endauth
             </div>
         </div>
     </div>

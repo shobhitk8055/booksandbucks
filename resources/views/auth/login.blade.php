@@ -1,4 +1,4 @@
-@extends('layouts.app1')
+@extends('layouts.app-self')
 
 @section('content')
 
@@ -15,13 +15,24 @@
                                     everyday, and a good example of this is the</p>
                                 <a href="{{route('register')}}" class="btn_3">Create an Account</a>
                             </div>
+
                         </div>
+
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="login_part_form">
                             <div class="login_part_form_iner">
                                 <h3>Welcome Back ! <br>
                                     Please Sign in now</h3>
+                                @if ($errors->any())
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
                                 <form class="row contact_form" action="{{ route('login') }}" method="post" novalidate="novalidate">
                                     <div class="col-md-12 form-group p_star">
                                         <input type="email" class="form-control" id="email" error-text="{{ $errors->first('email') }}" name="email" value=""

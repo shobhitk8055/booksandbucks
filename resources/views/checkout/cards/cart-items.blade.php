@@ -43,3 +43,4 @@
         {{ session()->get('default_currency')->symbol }}{{ Cart::total() }}
     </div>
 </div>
+

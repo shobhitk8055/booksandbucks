@@ -1,4 +1,4 @@
-@extends('layouts.app1')
+@extends('layouts.app-self')
 
 @section('content')
 <style>
@@ -8,18 +8,39 @@
         }
     }
 </style>
-    <main>
         <!--================Single Product Area =================-->
-            <div class="container" style="margin-top:60px;">
+            <div class="container" style="margin-top:100px;">
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
-                        <div class="product_img_slide owl-carousel">
-                            @foreach($images as $image)
-                            <div class="single_product_img">
-                                <img style="max-width: 400px; display: block; margin-left: auto; margin-right: auto;" src="{{'/storage/'.$image->path}}" alt="#">
+                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                @foreach($images as $image)
+                                <div class="carousel-item
+                                @if($count===1)
+                                active
+                                @endif
+                                        {{$count++}}
+">
+                                    <img class="d-block w-100" style="max-width: 300px; display: block; margin-left: auto; margin-right: auto;" src="{{'/storage/'.$image->path}}" alt="First slide">
+                                </div>
+                                    @endforeach
                             </div>
-                            @endforeach
+                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon"  aria-hidden="true"></span>
+                                <span class="sr-only" style="color: grey;">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
                         </div>
+                        {{--<div class="product_img_slide owl-carousel">--}}
+                            {{--@foreach($images as $image)--}}
+                            {{--<div class="single_product_img">--}}
+                                {{--<img style="max-width: 400px; display: block; margin-left: auto; margin-right: auto;" src="{{'/storage/'.$image->path}}" alt="#">--}}
+                            {{--</div>--}}
+                            {{--@endforeach--}}
+                        {{--</div>--}}
                     </div>
                     <div class="col-lg-6">
                         <div class="single_product_text text-center">
@@ -58,6 +79,4 @@
                     </div>
                 </div>
             </div>
-
-    </main>
 @endsection

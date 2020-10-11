@@ -7,13 +7,20 @@
     <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+    {{--<link rel="stylesheet" href="{{asset('assets/css/owl.carousel.min.css')}}">--}}
+    <link rel="stylesheet" href="{{asset('assets/css/themify-icons.css')}}">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/flatly/bootstrap.min.css">
 
-    <title>Bootstrap 4 Mobile-friendly Navigation Drawer Example</title>
+    <title>Books & Bucks</title>
 </head>
 <style>
+    *{
+        font-family: "Josefin Sans", sans-serif;
+    }
     .to-hide{
         display: block;
     }
