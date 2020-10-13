@@ -11816,17 +11816,33 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['product', 'image', 'csrf', 'category', 'category_product'],
+  props: ['product', 'image', 'csrf', 'category', 'category_product', 'genre', 'genre_books', 'are_book'],
   data: function data() {
     return {
       selectedCategories: [],
+      selectedGenres: [],
       products: JSON.parse(this.product),
       categories: JSON.parse(this.category),
+      genres: JSON.parse(this.genre),
       max: 0,
       min: 1000,
       filter: "none",
-      range: null
+      range: null,
+      areBooks: null
     };
   },
   methods: {
@@ -11844,23 +11860,32 @@ __webpack_require__.r(__webpack_exports__);
     },
     getProducts: function getProducts() {
       var pro_cat = JSON.parse(this.category_product);
+      var pro_gen = JSON.parse(this.genre_books);
 
-      if (this.selectedCategories.length !== 0) {
+      if (this.selectedGenres.length !== 0 && this.selectedGenres.length !== 0) {
         var productIds = [];
         var products = [];
 
-        for (var i = 0; i < pro_cat.length; i++) {
-          for (var j = 0; j < this.selectedCategories.length; j++) {
-            if (pro_cat[i].category_id === this.selectedCategories[j]) {
-              productIds.push(pro_cat[i].product_id);
+        for (var i = 0; i < pro_gen.length; i++) {
+          for (var j = 0; j < this.selectedGenres.length; j++) {
+            if (pro_gen[i].genre_id === this.selectedGenres[j]) {
+              productIds.push(this.getProductId(pro_gen[i].book_id));
             }
           }
         }
 
-        for (var _i = 0; _i < productIds.length; _i++) {
-          for (var _j = 0; _j < this.products.length; _j++) {
-            if (productIds[_i] === this.products[_j].id) {
-              products.push(this.products[_j]);
+        for (var _i = 0; _i < pro_cat.length; _i++) {
+          for (var _j = 0; _j < this.selectedCategories.length; _j++) {
+            if (pro_cat[_i].category_id === this.selectedCategories[_j]) {
+              productIds.push(pro_cat[_i].product_id);
+            }
+          }
+        }
+
+        for (var _i2 = 0; _i2 < productIds.length; _i2++) {
+          for (var _j2 = 0; _j2 < this.products.length; _j2++) {
+            if (productIds[_i2] === this.products[_j2].id) {
+              products.push(this.products[_j2]);
             }
           }
         }
@@ -11868,6 +11893,15 @@ __webpack_require__.r(__webpack_exports__);
         return this.removeSame(this.removeMinimum(this.filterProducts(products, this.filter)));
       } else {
         return this.removeSame(this.removeMinimum(this.filterProducts(this.products, this.filter)));
+      }
+    },
+    getProductId: function getProductId(bookId) {
+      var products = this.products;
+
+      for (var i = 0; i < products.length; i++) {
+        if (products[i].book_id === bookId) {
+          return products[i].id;
+        }
       }
     },
     filterProducts: function filterProducts(products, filter) {
@@ -11949,6 +11983,15 @@ __webpack_require__.r(__webpack_exports__);
       var uniqueSet = new Set(jsonObject);
       var uniqueArray = Array.from(uniqueSet).map(JSON.parse);
       return uniqueArray;
+    },
+    isBook: function isBook() {
+      if (this.selectedCategories.length === 0) {
+        return parseInt(this.are_book);
+      } else {
+        if (this.selectedCategories[0] === 1) {
+          return 1;
+        }
+      }
     }
   },
   mounted: function mounted() {
@@ -37130,10 +37173,96 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container-fluid mt-5" }, [
-    _vm._m(0),
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "col-xl-7 col-lg-8 col-md-10" }, [
+        _c("div", { staticClass: "section-tittle mb-70 text-center" }, [
+          _c("h2", [_vm._v("Shop")]),
+          _vm._v(" "),
+          _c("p", [_vm._v("Books & Stationary")]),
+          _vm._v(" " + _vm._s(_vm.areBooks) + "\n            ")
+        ])
+      ])
+    ]),
     _vm._v(" "),
     _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-xl-3 col-lg-4 col-md-2" }, [
+        _vm.isBook()
+          ? _c("table", { staticClass: "table table-bordered" }, [
+              _vm._m(0),
+              _vm._v(" "),
+              _c("tbody", [
+                _c("tr", [
+                  _c("td", [
+                    _c(
+                      "form",
+                      { staticClass: "form-check" },
+                      _vm._l(_vm.genres, function(category) {
+                        return _c("div", [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.selectedGenres,
+                                expression: "selectedGenres"
+                              }
+                            ],
+                            staticClass: "form-check-input",
+                            attrs: { type: "checkbox", id: category.name },
+                            domProps: {
+                              value: category.id,
+                              checked: Array.isArray(_vm.selectedGenres)
+                                ? _vm._i(_vm.selectedGenres, category.id) > -1
+                                : _vm.selectedGenres
+                            },
+                            on: {
+                              change: function($event) {
+                                var $$a = _vm.selectedGenres,
+                                  $$el = $event.target,
+                                  $$c = $$el.checked ? true : false
+                                if (Array.isArray($$a)) {
+                                  var $$v = category.id,
+                                    $$i = _vm._i($$a, $$v)
+                                  if ($$el.checked) {
+                                    $$i < 0 &&
+                                      (_vm.selectedGenres = $$a.concat([$$v]))
+                                  } else {
+                                    $$i > -1 &&
+                                      (_vm.selectedGenres = $$a
+                                        .slice(0, $$i)
+                                        .concat($$a.slice($$i + 1)))
+                                  }
+                                } else {
+                                  _vm.selectedGenres = $$c
+                                }
+                              }
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "label",
+                            {
+                              staticClass: "form-check-label",
+                              attrs: { for: category.name }
+                            },
+                            [
+                              _vm._v(
+                                "\n                                    " +
+                                  _vm._s(category.name) +
+                                  "\n                                "
+                              )
+                            ]
+                          )
+                        ])
+                      }),
+                      0
+                    )
+                  ])
+                ])
+              ])
+            ])
+          : _vm._e(),
+        _vm._v(" "),
         _c("table", { staticClass: "table table-bordered" }, [
           _vm._m(1),
           _vm._v(" "),
@@ -37347,9 +37476,7 @@ var render = function() {
               ])
             ])
           ])
-        ]),
-        _vm._v(" "),
-        _vm._m(4)
+        ])
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "col-xl-8 col-lg-4 col-md-6" }, [
@@ -37411,7 +37538,8 @@ var render = function() {
                             width: "100%",
                             "background-color": "#0b0b0b",
                             "padding-top": "10px",
-                            "padding-bottom": "10px"
+                            "padding-bottom": "10px",
+                            color: "white"
                           },
                           attrs: { type: "submit" }
                         },
@@ -37438,11 +37566,9 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row justify-content-center" }, [
-      _c("div", { staticClass: "col-xl-7 col-lg-8 col-md-10" }, [
-        _c("div", { staticClass: "section-tittle mb-70 text-center" }, [
-          _c("h2", [_vm._v("Shop")])
-        ])
+    return _c("thead", [
+      _c("th", { staticStyle: { color: "#FF0000" } }, [
+        _vm._v("\n                    Genres\n                ")
       ])
     ])
   },
@@ -37461,7 +37587,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("thead", [
-      _c("th", [_vm._v("\n                Price Range\n                ")])
+      _c("th", { staticStyle: { color: "#FF0000" } }, [
+        _vm._v("\n                Price Range\n                ")
+      ])
     ])
   },
   function() {
@@ -37469,19 +37597,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("thead", [
-      _c("th", [_vm._v("\n                    Filters\n                ")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("table", { staticClass: "table table-bordered" }, [
-      _c("thead", [
-        _c("th", [_vm._v("\n                    Authors\n                ")])
-      ]),
-      _vm._v(" "),
-      _c("tbody", [_c("tr", [_c("td")])])
+      _c("th", { staticStyle: { color: "#FF0000" } }, [
+        _vm._v("\n                    Filters\n                ")
+      ])
     ])
   }
 ]

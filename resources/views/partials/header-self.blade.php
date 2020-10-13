@@ -34,7 +34,9 @@
                     <i class="fas fa-search" style="font-size: 25px; color: red;"></i></a>
             </div>
             <div class="col-1 ml-2 to-show"><a href="{{ route('cart.show') }}">
-                <i class="fas fa-shopping-cart" style="font-size: 25px; color: red;"></i></a>
+                <i class="fas fa-shopping-cart text-large" style="color: red;"></i></a>
+                <span style="position: absolute;" class="badge ml-5 badge-light">{{Cart::all()->count() === 0 ? "" : Cart::all()->count()}}</span>
+
             </div>
             @auth('customer')
             <div class="col-1 ml-2 to-show"><a href="{{ route('account.dashboard') }}">
@@ -70,7 +72,10 @@
                 </div>
             </div>
             <div class="col-2 to-hide">
-                <a style="width: max-content;" href="{{ route('cart.show') }}"><i class="fas fa-shopping-cart mt-2" style="font-size: 25px; color: #E12323;"></i></a>
+                <a style="width: max-content;" href="{{ route('cart.show') }}">
+                    <i class="fas fa-shopping-cart mt-2" style="font-size: 25px; color: #E12323;"></i>
+                    <span class="badge badge-light">{{Cart::all()->count() === 0 ? "" : Cart::all()->count()}}</span>
+                </a>
                 @auth('customer')
                 <a  style="width: max-content;" href="{{ route('account.dashboard') }}"><i class="far fa-user mt-2 ml-3" style="font-size: 25px; color: #E12323;"></i></a>
                 @else

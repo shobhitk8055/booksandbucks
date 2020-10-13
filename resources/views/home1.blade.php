@@ -33,6 +33,7 @@
         }
     }
 </style>
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-4 col-lg-2 icon-column">
@@ -40,7 +41,7 @@
                 <i class="fas fa-book" ></i>
             </p>
             <p class="icon-text">
-                Best books
+                Best books {{ \Illuminate\Support\Facades\Session::get('modal') }}
             </p>
         </div>
         <div class="col-4 col-lg-2 icon-column">
@@ -92,7 +93,7 @@
             <!-- Section tittle -->
             <div class="row justify-content-center">
                 <div class="col-xl-7 col-lg-8 col-md-10">
-                    <div class="section-tittle mb-40 text-center">
+                    <div class="section-tittle mb-10 text-center">
                         <h2>Feature Collections</h2>
                         <p></p>
                     </div>
@@ -109,8 +110,9 @@
                                     <form  method="post" action="{{ route('add.to.cart') }}">
                                     @csrf
                                         <input type="hidden" name="slug" value="{{ $product->slug }}" />
+                                        <input type="hidden" name="modal" value="1" />
                                     <input type="hidden" name="qty" value="1" />
-                                    <button type="submit" style="background-color: transparent; border: none;">
+                                    <button style="background-color: transparent; border: none;">
                                         Add to cart
                                     </button>
                                     </form>
@@ -127,9 +129,9 @@
                             </span>
                             </div>
                         </div>
+
                     </div>
                 @endforeach
-
             </div>
 
 
@@ -142,6 +144,32 @@
             {{--</div>--}}
         </div>
     </div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="margin-top: 150px; padding-top: 100px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Product added to the Cart!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <center><i class="fas fa-check-square" style="font-size: 100px; color: green;"></i></center>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a href="{{route('cart.show')}}" type="button" class="btn btn-primary">View Cart</a>
+            </div>
+        </div>
+    </div>
+</div>
+@if( \Illuminate\Support\Facades\Session::get('modal'))
+    <script>
+        $(window).on('load',function(){
+            $("#exampleModal").modal('show');
+        });
+    </script>
+@endif
 @include('partials.shop-method')
 
 @endsection

@@ -29,7 +29,8 @@ class CartController extends Controller
         }
         Session::flash('type', $type);
         Session::flash('message', $message);
-            
+        Session::flash('modal', 1);
+
         return redirect()
             ->back();
     }

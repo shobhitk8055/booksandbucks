@@ -5,11 +5,37 @@
             <div class="col-xl-7 col-lg-8 col-md-10">
                 <div class="section-tittle mb-70 text-center">
                     <h2>Shop</h2>
+                    <p>Books & Stationary</p> {{areBooks}}
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-xl-3 col-lg-4 col-md-2" >
+                <table class="table table-bordered" v-if="isBook()">
+                    <thead>
+                    <th style="color:#FF0000">
+                        Genres
+                    </th>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <form class="form-check">
+                                <div v-for="category in genres">
+                                    <input class="form-check-input"
+                                           type="checkbox"
+                                           :value="category.id"
+                                           :id="category.name"
+                                            v-model="selectedGenres">
+                                    <label class="form-check-label" :for="category.name">
+                                        {{category.name}}
+                                    </label>
+                                </div>
+                            </form>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
                 <table class="table table-bordered">
                     <thead>
                     <th style="color:#FF0000">
@@ -37,7 +63,7 @@
                 </table>
                 <table class="table table-bordered">
                     <thead>
-                    <th>
+                    <th style="color:#FF0000">
                     Price Range
                     </th>
                     </thead>
@@ -64,7 +90,7 @@
                 </table>
                 <table class="table table-bordered">
                     <thead>
-                    <th>
+                    <th style="color:#FF0000">
                         Filters
                     </th>
                     </thead>
@@ -92,19 +118,6 @@
                     </tr>
                     </tbody>
                 </table>
-                <table class="table table-bordered">
-                    <thead>
-                    <th>
-                        Authors
-                    </th>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
             </div>
             <div class="col-xl-8 col-lg-4 col-md-6" >
                 <div class="row">
@@ -124,7 +137,7 @@
                                 <input type="hidden" name="_token" :value="csrf" />
 
                                 <input type="hidden" name="qty" value="1" />
-                                <button style="width: 100%; background-color: #0b0b0b; padding-top:10px; padding-bottom: 10px;" type="submit" >
+                                <button style="width: 100%; background-color: #0b0b0b; padding-top:10px; padding-bottom: 10px; color:white;" type="submit" >
                                     Add to cart
                                 </button>
                             </form>
@@ -137,18 +150,24 @@
 </template>
 
 <script>
-
     export default {
-        props: ['product', 'image', 'csrf', 'category', 'category_product'],
+        props: ['product', 'image',
+                'csrf', 'category',
+                'category_product',
+                'genre', 'genre_books',
+                'are_book'],
         data() {
             return {
                 selectedCategories: [],
+                selectedGenres: [],
                 products:JSON.parse(this.product),
                 categories: JSON.parse(this.category),
+                genres: JSON.parse(this.genre),
                 max: 0,
                 min:1000,
                 filter: "none",
                 range: null,
+                areBooks: null,
             }
         },
         methods: {
@@ -165,9 +184,19 @@
             },
             getProducts: function () {
                 let pro_cat = JSON.parse(this.category_product);
-                if (this.selectedCategories.length !== 0) {
+                let pro_gen = JSON.parse(this.genre_books);
+                if (this.selectedGenres.length !== 0 && this.selectedGenres.length !== 0) {
                     let productIds = [];
                     let products = [];
+
+                    for (let i = 0; i < pro_gen.length; i++) {
+                        for (let j = 0; j < this.selectedGenres.length; j++) {
+                            if (pro_gen[i].genre_id === this.selectedGenres[j]) {
+                                productIds.push(this.getProductId(pro_gen[i].book_id));
+                            }
+                        }
+                    }
+
                     for (let i = 0; i < pro_cat.length; i++) {
                         for (let j = 0; j < this.selectedCategories.length; j++) {
                             if (pro_cat[i].category_id === this.selectedCategories[j]) {
@@ -183,8 +212,17 @@
                         }
                     }
                     return this.removeSame(this.removeMinimum(this.filterProducts(products,this.filter)));
-                } else {
+                }
+                else {
                     return this.removeSame(this.removeMinimum(this.filterProducts(this.products,this.filter)));
+                }
+            },
+            getProductId(bookId){
+                let products = this.products;
+                for (let i=0;i<products.length;i++){
+                    if (products[i].book_id===bookId){
+                        return products[i].id;
+                    }
                 }
             },
             filterProducts(products,filter){
@@ -211,7 +249,6 @@
                         })
                 }
             },
-
             getRange(products,parameter){
                 let min = products[0].price, max = products[0].price;
                 for (let i = 1, len=products.length; i < len; i++) {
@@ -222,7 +259,6 @@
                 if (parameter === "max"){ return max; }
                 if (parameter === "min"){ return min; }
             },
-
             removeMinimum(products){
                 let max = this.range;
                 if (max!==null){
@@ -242,12 +278,22 @@
                 let uniqueSet = new Set(jsonObject);
                 let uniqueArray = Array.from(uniqueSet).map(JSON.parse);
                 return uniqueArray;
+            },
+            isBook(){
+                if (this.selectedCategories.length === 0){
+                    return parseInt(this.are_book);
+                }else{
+                    if(this.selectedCategories[0] === 1){
+                        return 1;
+                    }
+                }
             }
         },
         mounted() {
             this.range = null;
             this.max = this.getRange(this.products,'max');
             this.min = this.getRange(this.products,'min');
+
         }
     }
 </script>

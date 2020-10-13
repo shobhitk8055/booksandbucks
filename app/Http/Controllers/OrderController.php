@@ -101,20 +101,44 @@ class OrderController extends Controller
     public function place(Request $request)
     {
         $this->customer($request);
-        $this->shippingAddress($request);
-        $this->billingAddress($request);
+//        $this->billingAddress($request);
         $this->paymentOption();
         $this->orderStatus();
-
-        $orderData = [
-            'shipping_option' => $request->get('shipping_option'),
-            'payment_option' => $request->get('payment_option'),
-            'order_status_id' => $this->orderStatus->id,
-            'currency_id' => $this->getCurrency()->id,
-            'customer_id' => $this->customer->id,
-            'shipping_address_id' => $this->shippingAddress->id,
-            'billing_address_id' => $this->billingAddress->id,
-        ];
+        if (array_key_exists("shipping_address_id",$request->all())){
+            if ($request->shipping_address_id !== null) {
+                $orderData = [
+                    'shipping_option' => $request->get('shipping_option'),
+                    'payment_option' => $request->get('payment_option'),
+                    'order_status_id' => $this->orderStatus->id,
+                    'currency_id' => $this->getCurrency()->id,
+                    'customer_id' => $this->customer->id,
+                    'shipping_address_id' => $request->shipping_address_id,
+//                    'billing_address_id' => $this->billingAddress->id,
+                ];
+            }else{
+                $this->shippingAddress($request);
+                $orderData = [
+                    'shipping_option' => $request->get('shipping_option'),
+                    'payment_option' => $request->get('payment_option'),
+                    'order_status_id' => $this->orderStatus->id,
+                    'currency_id' => $this->getCurrency()->id,
+                    'customer_id' => $this->customer->id,
+                    'shipping_address_id' => $this->shippingAddress->id,
+//                    'billing_address_id' => $this->billingAddress->id,
+                ];
+            }
+        } else {
+            $this->shippingAddress($request);
+            $orderData = [
+                'shipping_option' => $request->get('shipping_option'),
+                'payment_option' => $request->get('payment_option'),
+                'order_status_id' => $this->orderStatus->id,
+                'currency_id' => $this->getCurrency()->id,
+                'customer_id' => $this->customer->id,
+                'shipping_address_id' => $this->shippingAddress->id,
+//                'billing_address_id' => $this->billingAddress->id,
+            ];
+        }
         $order = $this->orderRepository->create($orderData);
         $this->syncProducts($order, $request);
         Cart::clear();
@@ -154,7 +178,6 @@ class OrderController extends Controller
     public function shippingAddress($request)
     {
         $addressData = $request->get('shipping');
-
         if (isset($addressData['address_id'])) {
             $this->shippingAddress = $this->addressRepository->find($addressData['address_id']);
 
@@ -164,7 +187,6 @@ class OrderController extends Controller
         $addressData['customer_id'] = $this->customer->id;
 
         $this->shippingAddress = $this->addressRepository->create($addressData);
-
         return $this;
     }
 

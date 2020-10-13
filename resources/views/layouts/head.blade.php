@@ -16,7 +16,7 @@
 
 <div id="app">
     <avored-layout inline-template>
-       @yield('content')
+       @yield('contents')
     </avored-layout>
 </div>
     @include('partials.footer1')

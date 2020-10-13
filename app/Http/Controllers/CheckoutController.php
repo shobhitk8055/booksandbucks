@@ -48,23 +48,7 @@ class CheckoutController extends Controller
         $shippingOptions = Shipping::all();
         $countryOptions = $this->CountryRepository->options();
 
-        return view('checkout.show')
-            ->with(compact('shippingOptions', 'paymentOptions', 'addresses', 'countryOptions'));
-    }
-    public function b(){
-        $addresses = Collection::make([]);
-        if (Auth::guard('customer')->check()) {
-            $addresses = $this->addressRepository->getByCustomerId(Auth::guard('customer')->user()->id);
-        }
-
-        $paymentOptions = Payment::all();
-        $shippingOptions = Shipping::all();
-        $countryOptions = $this->CountryRepository->options();
-
         return view('checkout.checkout-self')
             ->with(compact('shippingOptions', 'paymentOptions', 'addresses', 'countryOptions'));
-    }
-    public function bp(Request $request){
-        dd($request->all());
     }
 }

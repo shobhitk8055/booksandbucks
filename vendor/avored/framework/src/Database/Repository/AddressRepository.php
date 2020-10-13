@@ -15,7 +15,20 @@ class AddressRepository implements AddressModelInterface
      */
     public function create(array $data): Address
     {
-        return Address::create($data);
+        return Address::create([
+            'first_name'=>$data["'first_name'"],
+            'last_name'=>$data["'last_name'"],
+            'phone'=>$data["'phone'"],
+            'address1'=>$data["'address1'"],
+            'address2'=>$data["'address2'"],
+            'country_id'=>$data["'country_id'"],
+            'state'=>$data["'state'"],
+            'postcode'=>$data["'postcode'"],
+            'company_name'=>$data["'company_name'"],
+            'city'=>$data["'city'"],
+            'type'=>$data["type"],
+            'customer_id'=>$data["customer_id"]
+        ]);
     }
 
     /**

@@ -10,9 +10,9 @@
     {{--<link rel="stylesheet" href="{{asset('assets/css/owl.carousel.min.css')}}">--}}
     <link rel="stylesheet" href="{{asset('assets/css/themify-icons.css')}}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 
-
-    <!-- Bootstrap CSS -->
+<!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/flatly/bootstrap.min.css">
 
     <title>Books & Bucks</title>
@@ -123,8 +123,8 @@
 </style>
 <body>
 @include('partials.header-self')
+            @yield('content')
 
-@yield('content')
 <!-- End Main Content -->
 
 @include('partials.footer-self')
