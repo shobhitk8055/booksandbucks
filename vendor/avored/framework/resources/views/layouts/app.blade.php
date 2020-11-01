@@ -44,6 +44,8 @@
                     <div class="rounded p-5 mx-3 my-3 bg-white">
                         <router-view></router-view>
                         @yield('content')
+                        <offer></offer>
+
                     </div>
 
                     @include('avored::partials.footer')

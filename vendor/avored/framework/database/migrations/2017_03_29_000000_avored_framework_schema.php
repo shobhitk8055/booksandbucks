@@ -243,6 +243,19 @@ class AvoredFrameworkSchema extends Migration
             $table->string('isbn_13')->nullable();
             $table->timestamps();
         });
+
+        Schema::create('offers', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name');
+            $table->string('slug');
+            $table->enum('type',['discount_percent', 'discount_amount', 'fixed_amount']);
+            $table->integer('discount_percent')->nullable();
+            $table->bigInteger('discount_amount')->nullable();
+            $table->bigInteger('fixed_amount')->nullable();
+            $table->bigInteger('is_main')->nullable()->default(0);
+            $table->timestamps();
+        });
+
         Schema::create('products', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->enum('type', ['BASIC', 'VARIATION', 'DOWNLOADABLE', 'VARIABLE_PRODUCT'])->default('BASIC');
@@ -257,6 +270,9 @@ class AvoredFrameworkSchema extends Migration
             $table->decimal('qty', 10, 6)->nullable();
             $table->tinyInteger('is_taxable')->nullable()->default(null);
             $table->decimal('price', 10, 6)->nullable()->default(null);
+            $table->unsignedBigInteger('offer_id')->nullable()->default(null);
+            $table->decimal('offer_discount', 10, 6)->nullable()->default(null);
+            $table->decimal('initial_price', 10, 6)->nullable()->default(null);
             $table->decimal('cost_price', 10, 6)->nullable()->default(null);
             $table->float('weight')->nullable()->default(null);
             $table->float('width')->nullable()->default(null);
@@ -266,10 +282,9 @@ class AvoredFrameworkSchema extends Migration
             $table->string('meta_description')->nullable()->default(null);
             $table->unsignedBigInteger('book_id')->nullable();
             $table->foreign('book_id')->references('id')->on('books')->onDelete('cascade');
+            $table->foreign('offer_id')->references('id')->on('offers')->onDelete('cascade');
             $table->timestamps();
         });
-
-
 
         Schema::create('genres', function (Blueprint $table) {
             $table->bigIncrements('id');
@@ -286,7 +301,36 @@ class AvoredFrameworkSchema extends Migration
             $table->timestamps();
         });
 
-            Schema::create('product_images', function (Blueprint $table) {
+
+
+        Schema::create('category_offer', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('offer_id');
+            $table->unsignedBigInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->foreign('offer_id')->references('id')->on('offers')->onDelete('cascade');
+            $table->timestamps();
+        });
+
+        Schema::create('genre_offer', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('offer_id');
+            $table->unsignedBigInteger('genre_id');
+            $table->foreign('offer_id')->references('id')->on('offers')->onDelete('cascade');
+            $table->foreign('genre_id')->references('id')->on('genres')->onDelete('cascade');
+            $table->timestamps();
+        });
+
+        Schema::create('offer_product', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('offer_id');
+            $table->unsignedBigInteger('product_id');
+            $table->foreign('offer_id')->references('id')->on('offers')->onDelete('cascade');
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
+            $table->timestamps();
+        });
+
+        Schema::create('product_images', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('product_id');
             $table->text('path')->nullable()->default(null);

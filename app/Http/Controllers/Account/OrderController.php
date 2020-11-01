@@ -45,8 +45,7 @@ class OrderController extends Controller
      * @param \AvoRed\Framework\Database\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function show(Order $order)
-    {
+    public function show(Order $order){
         $order->load(['products', 'orderComments.commentable', 'customer', 'shippingAddress.country', 'billingAddress.country']);
         return view('account.order.show')
             ->with(compact('order'));

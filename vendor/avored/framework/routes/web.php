@@ -61,6 +61,27 @@ Route::middleware(['web', 'admin.auth:admin', 'permission'])
         Route::post('genre/store', 'Genre\Controllers\GenreController@store')
             ->name('genre.store');
 
+        Route::get('offers', 'Offer\Controllers\OfferController@index')
+            ->name('offer.index');
+
+        Route::get('offers/create', 'Offer\Controllers\OfferController@create')
+            ->name('offer.create');
+
+        Route::post('offers/store', 'Offer\Controllers\OfferController@store')
+            ->name('offer.store');
+
+        Route::get('offers/edit/{offer_id}', 'Offer\Controllers\OfferController@edit')
+            ->name('offer.edit');
+
+        Route::post('offers/update', 'Offer\Controllers\OfferController@update')
+            ->name('offer.update');
+
+        Route::get('offers/delete/{id}', 'Offer\Controllers\OfferController@delete')
+            ->name('offer.delete');
+
+        Route::get('offers/highlight/{id}/{remove}', 'Offer\Controllers\OfferController@highlight')
+            ->name('offer.highlight');
+
         Route::get('', [\AvoRed\Framework\System\Controllers\DashboardController::class, 'index'])
             ->name('dashboard');
 

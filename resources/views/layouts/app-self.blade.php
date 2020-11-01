@@ -48,8 +48,8 @@
     }
 
     .searchbar:hover > .search_input{
-        padding-top: 0 10px;
-        width: 250px;
+        padding: 0 10px;
+        width: 190px;
         caret-color:red;
         transition: width 0.4s linear;
     }
@@ -70,6 +70,7 @@
         color:white;
         text-decoration:none;
     }
+
     body{
         font-family: 'Josefin Sans', sans-serif;
     }
@@ -122,11 +123,26 @@
 
 </style>
 <body>
+<div id="app">
+
 @include('partials.header-self')
             @yield('content')
+</div>
 
 <!-- End Main Content -->
+@if(file_exists(public_path('mix-manifest.json')))
+    <script src="{{ mix('js/avored.js') }}"></script>
+@else
+    <script src="{{ asset('js/avored.js') }}"></script>
+@endif
 
+@stack('scripts')
+
+@if(file_exists(public_path('mix-manifest.json')))
+    <script src="{{ mix('js/app.js') }}"></script>
+@else
+    <script src="{{ asset('js/app.js') }}"></script>
+@endif
 @include('partials.footer-self')
 <!-- Bootstrap JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

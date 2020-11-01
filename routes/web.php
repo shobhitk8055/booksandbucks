@@ -19,15 +19,20 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 Route::get('b', function (){
-    return view('check');
-}
-);
+    return view('offers.index');
+});
+
+Route::get('genre/{genre}', 'GenreController@index')->name('genre.index');
+Route::get('offer/{offer}', 'OfferController@index')->name('offer.index');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('', 'HomeController@index')->name('home');
 Route::get('shop', 'ShopController@index')->name('shop');
 Route::get('about', 'AboutController@index')->name('about');
 Route::get('blog', 'BlogController@index')->name('blog');
 Route::get('contact', 'ContactController@index')->name('contact');
+
+Route::get('checkout/payment/{order}', 'PaymentController@index')->name('payment');
+Route::post('checkout/payment/place', 'PaymentController@place')->name('payment.place');
 
 Route::get('category/{category}', 'CategoryController@show')->name('category.show');
 Route::get('product/{product}', 'ProductController@show')->name('product.show');

@@ -13,6 +13,7 @@
 {{--            <p>{{ json_encode($adminMenu) }}</p>--}}
         @endforeach
         <avored-menu :sidebar="sidebar" :menu="{{ json_encode($genres) }}"> adfad</avored-menu>
+        <avored-menu :sidebar="sidebar" :menu="{{ json_encode($offers) }}"> adfad</avored-menu>
     </nav>
 
 </div>

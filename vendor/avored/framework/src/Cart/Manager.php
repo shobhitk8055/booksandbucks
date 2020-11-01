@@ -135,7 +135,6 @@ class Manager
         $message = '';
         $product = $this->productRepository->findBySlug($slug);
 
-
         //If Exist: Get Cart Product Object
         //If Not Exist: Get Cart Product Empty Object
         // Then compare the new Qty here
@@ -144,8 +143,8 @@ class Manager
             $product->type === Product::PRODUCT_TYPES_BASIC &&
             $qty > (float) $product->qty
         ) {
-            
-            return [false, __('avored::system.notification.not_enough_qty')];
+
+            return [false, __('Not Enough Quantity Avaiable of this item')];
         }
 
         if ($this->exist($slug)) {

@@ -21,16 +21,22 @@ class CartController extends Controller
             $request->get('slug'),
             $request->get('qty'),
             $request->get('attributes')
-        );   
-
+        );
         $type = 'error';
         if ($success) {
             $type = 'success';
         }
         Session::flash('type', $type);
         Session::flash('message', $message);
-        Session::flash('modal', 1);
+        if ($message === "Not Enough Quantity Avaiable of this item"){
+            Session::flash('modal', 0);
+        } else{
+            Session::flash('modal', 1);
+        }
 
+//        Cart::add(
+//            $request->slug
+//        );
         return redirect()
             ->back();
     }

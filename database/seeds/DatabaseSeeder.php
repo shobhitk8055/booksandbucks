@@ -24,14 +24,19 @@ class DatabaseSeeder extends Seeder
             'conversation_rate'=>1.00,
             'status'=>'ENABLED'
         ]);
-        DB::table('categories')->insert([
-            'name'=>'book',
+        DB::table('categories')->insert(
+            ['name'=>'book',
             'slug'=>'book',
             'meta_title'=>'book',
-            'meta_description'=>'book'
-        ]);
+            'meta_description'=>'book'],
+            ['name'=>'stationary',
+            'slug'=>'stationary',
+            'meta_title'=>'stationary',
+            'meta_description'=>'stationary']
+
+        );
         DB::table('genres')->insert(['name'=>'fantasy']);
         DB::table('genres')->insert(['name'=>'drama']);
-        // $this->call(UsersTableSeeder::class);
+        DB::table('genres')->insert(['name'=>'thriller']);
     }
 }

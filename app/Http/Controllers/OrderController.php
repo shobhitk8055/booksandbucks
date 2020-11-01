@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use AvoRed\Framework\Database\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use AvoRed\Framework\Support\Facades\Cart;
@@ -100,15 +101,16 @@ class OrderController extends Controller
      */
     public function place(Request $request)
     {
+//        dd($request->all());
         $this->customer($request);
 //        $this->billingAddress($request);
-        $this->paymentOption();
+//        $this->paymentOption();
         $this->orderStatus();
         if (array_key_exists("shipping_address_id",$request->all())){
             if ($request->shipping_address_id !== null) {
                 $orderData = [
                     'shipping_option' => $request->get('shipping_option'),
-                    'payment_option' => $request->get('payment_option'),
+                    'payment_option' => 0,
                     'order_status_id' => $this->orderStatus->id,
                     'currency_id' => $this->getCurrency()->id,
                     'customer_id' => $this->customer->id,
@@ -119,7 +121,7 @@ class OrderController extends Controller
                 $this->shippingAddress($request);
                 $orderData = [
                     'shipping_option' => $request->get('shipping_option'),
-                    'payment_option' => $request->get('payment_option'),
+                    'payment_option' => 0,
                     'order_status_id' => $this->orderStatus->id,
                     'currency_id' => $this->getCurrency()->id,
                     'customer_id' => $this->customer->id,
@@ -131,7 +133,7 @@ class OrderController extends Controller
             $this->shippingAddress($request);
             $orderData = [
                 'shipping_option' => $request->get('shipping_option'),
-                'payment_option' => $request->get('payment_option'),
+                'payment_option' => 0,
                 'order_status_id' => $this->orderStatus->id,
                 'currency_id' => $this->getCurrency()->id,
                 'customer_id' => $this->customer->id,
@@ -141,11 +143,11 @@ class OrderController extends Controller
         }
         $order = $this->orderRepository->create($orderData);
         $this->syncProducts($order, $request);
-        Cart::clear();
 
-        return redirect()
-            ->route('order.successful', $order->id)
-            ->with('success', 'Order Placed Successfuly!');
+        return redirect()->route('payment',['order'=>$order->id]);
+//        return redirect()
+//            ->route('order.successful', $order->id)
+//            ->with('success', 'Order Placed Successfully!');
     }
 
     /**

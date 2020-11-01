@@ -45,10 +45,6 @@
                     {{ __('avored::system.pages.title.info', ['attribute' => __('avored::system.terms.address')]) }}
                 </div>
                 <div class="p-5 flex w-full">
-                    <div class="border rounded w-1/2">
-                        <div class="border-b font-semibold text-red-500 p-5 py-3">
-                            {{ __('avored::system.terms.shipping_address') }}
-                        </div>
                         <div class="p-5">
                             {{ $order->shippingAddress->first_name }} {{ $order->shippingAddress->last_name }} <br/>
                             {{ $order->shippingAddress->phone }} <br/>
@@ -58,22 +54,21 @@
                             {{ $order->shippingAddress->country->name }} <br/>
                             {{ $order->shippingAddress->postcode }} <br/>
                         </div>
-                    </div>
 
-                    <div class="border rounded w-1/2 ml-5">
-                        <div class="border-b font-semibold text-red-500 p-5 py-3">
-                            {{ __('avored::system.terms.billing_address') }}
-                        </div>
-                        <div class="p-5">
-                            {{ $order->billingAddress->first_name }} {{ $order->billingAddress->last_name }} <br/>
-                            {{ $order->billingAddress->phone }} <br/>
-                            {{ $order->billingAddress->address1 }} {{ $order->billingAddress->address2 }} <br/>
-                            {{ $order->billingAddress->city }} <br/>
-                            {{ $order->billingAddress->state }} <br/>
-                            {{ $order->billingAddress->country->name }} <br/>
-                            {{ $order->billingAddress->postcode }} <br/>
-                        </div>
-                    </div>  
+                    {{--<div class="border rounded w-1/2 ml-5">--}}
+                        {{--<div class="border-b font-semibold text-red-500 p-5 py-3">--}}
+                            {{--{{ __('avored::system.terms.billing_address') }}--}}
+                        {{--</div>--}}
+                        {{--<div class="p-5">--}}
+                            {{--{{ $order->billingAddress->first_name }} {{ $order->billingAddress->last_name }} <br/>--}}
+                            {{--{{ $order->billingAddress->phone }} <br/>--}}
+                            {{--{{ $order->billingAddress->address1 }} {{ $order->billingAddress->address2 }} <br/>--}}
+                            {{--{{ $order->billingAddress->city }} <br/>--}}
+                            {{--{{ $order->billingAddress->state }} <br/>--}}
+                            {{--{{ $order->billingAddress->country->name }} <br/>--}}
+                            {{--{{ $order->billingAddress->postcode }} <br/>--}}
+                        {{--</div>--}}
+                    {{--</div>  --}}
                 </div>
             </div>
         </div>

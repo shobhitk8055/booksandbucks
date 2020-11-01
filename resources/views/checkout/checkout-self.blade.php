@@ -2,68 +2,7 @@
 
 @section('content')
 <style>
-    /* The switch - the box around the slider */
-    .switch {
-        position: relative;
-        display: inline-block;
-        width: 60px;
-        height: 34px;
-    }
 
-    /* Hide default HTML checkbox */
-    .switch input {
-        opacity: 0;
-        width: 0;
-        height: 0;
-    }
-
-    /* The slider */
-    .slider {
-        position: absolute;
-        cursor: pointer;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #ccc;
-        -webkit-transition: .4s;
-        transition: .4s;
-    }
-
-    .slider:before {
-        position: absolute;
-        content: "";
-        height: 26px;
-        width: 26px;
-        left: 4px;
-        bottom: 4px;
-        background-color: white;
-        -webkit-transition: .4s;
-        transition: .4s;
-    }
-
-    input:checked + .slider {
-        background-color: #2196F3;
-    }
-
-    input:focus + .slider {
-        box-shadow: 0 0 1px #2196F3;
-    }
-
-    input:checked + .slider:before {
-        -webkit-transform: translateX(26px);
-        -ms-transform: translateX(26px);
-        transform: translateX(26px);
-    }
-
-    /* Rounded sliders */
-    .slider.round {
-        border-radius: 34px;
-    }
-
-    .slider.round:before {
-        border-radius: 50%;
-    }
     .plus-icon{
         color: #E82323;
         font-size: 60px;
@@ -82,7 +21,8 @@
     $(window).on('load',function() {
         let cartCount = "<?php echo count(Cart::toArray()) ?>"
         let addressCount = "<?php echo count($addresses) ?>"
-        if (addressCount === "1"){
+        console.log(typeof parseInt(addressCount));
+        if (parseInt(addressCount)){
             $(".new_address_table").hide();
         }
         if (cartCount === "0"){
@@ -156,27 +96,36 @@
             </div>
         </div>
             <div class="row mt-2">
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-lg-4">
                 <h4 style="color: #E82323;">
                     User Info
                 </h4>
                 @guest('customer')
                     <div class="row">
                         <div class="col">
-                            <input type="text" name="fname" class="form-control" placeholder="First name">
+                            <input type="text" name="first_name" class="form-control" placeholder="First name">
                         </div>
                         <div class="col">
-                            <input type="text" name="lname" class="form-control" placeholder="Last name">
+                            <input type="text" name="last_name" class="form-control" placeholder="Last name">
                         </div>
                     </div>
-                    <input class="form-control mt-2" name="mail" type="email" placeholder="email">
+                    <input class="form-control mt-2" name="email" type="email" placeholder="email">
+                    <div class="row mt-2">
+                        <div class="col">
+                            <input type="password" name="password" class="form-control" placeholder="Password">
+                        </div>
+                        <div class="col">
+                            <input type="password" name="confirm_password" class="form-control" placeholder="confirm_password">
+                        </div>
+                    </div>
                 @else
                     <div style="border: black; border-width: 1px; border-style: solid; ">
                         <h5 style="margin-top: 15px; margin-left: 15px;">{{auth()->guard('customer')->user()->full_name}}</h5>
                     </div>
                 @endguest
-
-                <h4 class="mt-3" style="color: #E82323;">
+            </div>
+            <div class="col-12 col-lg-8">
+                <h4 class="" style="color: #E82323;">
                     Shipping Address
                 </h4>
                 @if(count($addresses))
@@ -184,7 +133,7 @@
                     <h5 class="m-2">Saved Addresses</h5>
                     <div class="row">
                         @foreach($addresses as $address)
-                        <div class="col-5">
+                        <div class="col-4">
                             <div class="address m-2 p-2">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="shipping_address_id" onclick="onlyOne(this)" id="exampleRadios1" value="{{$address->id}}">
@@ -245,42 +194,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-6 mt-3 mt-lg-0">
-
-                <h4 style="color: #E82323;">
-                    Payment Options
-                </h4>
-                <div class="row mt-4">
-                    <div class="col-2">
-                        <label class="switch">
-                            <input type="checkbox" checked name="payment_option" value="a-cash-on-delivery">
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-                    <div class="col-10">
-                        <p style="font-size: 25px;">Cash on delivery</p>
-                    </div>
-                </div>
-                <div class="row mt-4">
-                    <div class="col-2">
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-                    <div class="col-10">
-                        <p style="font-size: 25px;">Net Banking</p>
-                    </div>
-                </div>
                 <input type="hidden" name="shipping_option" value="pickup">
                 <button type="submit"
-                        class="px-3 py-2 mt-3 bg-red-500 text-white text-sm font-semibold rounded"
+                        class="px-3 py-3 my-3 bg-red-500 text-white text-sm font-semibold button rounded"
                         style="font-size: 25px;"
                         id="submit-button"
                 >
-                    Place Order
+                    Continue to Payment
                 </button>
-            </div>
         </div>
     </div>
         </form>

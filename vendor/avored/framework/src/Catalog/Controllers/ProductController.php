@@ -142,6 +142,7 @@ class ProductController
     {
         $product = $this->productRepository->create($request->all());
         $this->saveProductCategory($product, $request);
+        $product->initial_price = $product->price;
 
         return redirect()->route('admin.product.edit', ['product' => $product->id])
             ->with('successNotification', __(

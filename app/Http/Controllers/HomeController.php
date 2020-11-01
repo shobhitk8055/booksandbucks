@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use AvoRed\Framework\Database\Contracts\PageModelInterface;
 use AvoRed\Framework\Database\Contracts\ProductModelInterface;
+use AvoRed\Framework\Database\Models\Offer;
 use AvoRed\Wishlist\Database\Contracts\WishlistModelInterface;
 use Illuminate\Support\Facades\Hash;
 
@@ -63,10 +64,12 @@ class HomeController extends Controller
             $products = $allProducts->load('mainImage')->random(8)->shuffle();
         }
 
+        $offers = Offer::where('is_main',1)->take(4)->get();
         return view('home1')
             ->with('heroProduct', $heroProduct)
             ->with('products', $products)
             ->with('page', $page)
-            ->with('wishlists', $wishlists);
+            ->with('wishlists', $wishlists)
+            ->with('offers', $offers);
     }
 }

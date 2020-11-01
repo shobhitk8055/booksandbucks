@@ -11,7 +11,8 @@ import {
     AvoRedModal,
     AvoRedAlert,
     AvoRedConfirm,
-    AvoRedDropdown
+    AvoRedDropdown,
+    CreateOffer
 } from 'avored-components'
 
 Vue.component('avored-table', AvoRedTable)
@@ -23,6 +24,7 @@ Vue.component('avored-tabs', AvoRedTabs)
 Vue.component('avored-tab', AvoRedTab)
 Vue.component('avored-modal', AvoRedModal)
 Vue.component('avored-dropdown', AvoRedDropdown)
+Vue.component('create-offer', CreateOffer)
 
 Vue.component('avored-menu', require('@/modules/system/components/layout/Menu').default)
 

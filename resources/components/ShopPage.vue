@@ -5,37 +5,13 @@
             <div class="col-xl-7 col-lg-8 col-md-10">
                 <div class="section-tittle mb-70 text-center">
                     <h2>Shop</h2>
-                    <p>Books & Stationary</p> {{areBooks}}
+                    <p>Book & Stationary</p>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-xl-3 col-lg-4 col-md-2" >
-                <table class="table table-bordered" v-if="isBook()">
-                    <thead>
-                    <th style="color:#FF0000">
-                        Genres
-                    </th>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>
-                            <form class="form-check">
-                                <div v-for="category in genres">
-                                    <input class="form-check-input"
-                                           type="checkbox"
-                                           :value="category.id"
-                                           :id="category.name"
-                                            v-model="selectedGenres">
-                                    <label class="form-check-label" :for="category.name">
-                                        {{category.name}}
-                                    </label>
-                                </div>
-                            </form>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
+
                 <table class="table table-bordered">
                     <thead>
                     <th style="color:#FF0000">
@@ -51,9 +27,36 @@
                                            type="checkbox"
                                            :value="category.id"
                                            :id="category.name"
-                                            v-model="selectedCategories">
+                                            v-model="selectedCategories"
+                                    >
                                     <label class="form-check-label" :for="category.name">
                                         {{category.name}}
+                                    </label>
+                                </div>
+                            </form>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <table class="table table-bordered" v-if="isBook()">
+                    <thead>
+                    <th style="color:#FF0000">
+                        Genres
+                    </th>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <form class="form-check">
+                                <div v-for="genre in genres">
+                                    <input class="form-check-input"
+                                           type="checkbox"
+                                           :value="genre.id"
+                                           :id="genre.name"
+                                           v-model="selectedGenres"
+                                    >
+                                    <label class="form-check-label" :for="genre.name">
+                                        {{genre.name}}
                                     </label>
                                 </div>
                             </form>
@@ -120,19 +123,21 @@
                 </table>
             </div>
             <div class="col-xl-8 col-lg-4 col-md-6" >
+                <!--<h2 class="mb-3">Fantasy</h2>-->
                 <div class="row">
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6"
                          v-for="product in getProducts()">
                         <div class="single-popular-items mb-50 text-center">
+                            <a :href="'/product/'+product.slug">
                             <div class="popular-img">
                                 <img v-bind:src="getImageURL(product.id)" alt="">
-                            </div>
+                            </div></a>
                             <div class="popular-caption">
                                 <h4 style="padding-top: 15px;">
-                                    <a style="color:#444444" href="">{{product.name}}</a>
+                                    <a style="color:#444444" :href="'/product/'+product.slug">{{product.name}}</a>
                                 </h4>    ₹ {{ numberFormat(product.price) }}
                             </div>
-                            <form  method="post" action="">
+                            <form  method="post" action="/add-to-cart">
                                 <input type="hidden" name="slug" :value="product.slug" />
                                 <input type="hidden" name="_token" :value="csrf" />
 
@@ -151,16 +156,14 @@
 
 <script>
     export default {
-        props: ['product', 'image',
-                'csrf', 'category',
-                'category_product',
-                'genre', 'genre_books',
-                'are_book'],
+        props: ['product', 'image', 'csrf', 'category',
+                'category_product', 'genre', 'genre_books',
+                'are_book', 'selected', 'select_genre'],
         data() {
             return {
                 selectedCategories: [],
                 selectedGenres: [],
-                products:JSON.parse(this.product),
+                products: JSON.parse(this.product),
                 categories: JSON.parse(this.category),
                 genres: JSON.parse(this.genre),
                 max: 0,
@@ -168,6 +171,18 @@
                 filter: "none",
                 range: null,
                 areBooks: null,
+                selectedCategory: null,
+            }
+        },
+        mounted() {
+            this.range = null;
+            this.max = this.getRange(this.products,'max');
+            this.min = this.getRange(this.products,'min');
+            if (this.selected){
+                this.selectedCategories.push(this.selected);
+            }
+            if (this.select_genre){
+                this.selectedGenres.push(parseInt(this.select_genre));
             }
         },
         methods: {
@@ -175,7 +190,7 @@
                 let images = JSON.parse(this.image);
                 for (let i =0;i<images.length;i++){
                     if (images[i].product_id === id){
-                        return "storage/" + images[i].path
+                        return "/storage/" + images[i].path
                     }
                 }
             },
@@ -185,25 +200,31 @@
             getProducts: function () {
                 let pro_cat = JSON.parse(this.category_product);
                 let pro_gen = JSON.parse(this.genre_books);
-                if (this.selectedGenres.length !== 0 && this.selectedGenres.length !== 0) {
+                if (this.selectedCategories.length === 0) {
+                    return this.removeSame(this.removeMinimum(this.filterProducts(this.products, this.filter)));
+                }else {
                     let productIds = [];
                     let products = [];
 
-                    for (let i = 0; i < pro_gen.length; i++) {
-                        for (let j = 0; j < this.selectedGenres.length; j++) {
-                            if (pro_gen[i].genre_id === this.selectedGenres[j]) {
-                                productIds.push(this.getProductId(pro_gen[i].book_id));
-                            }
-                        }
-                    }
-
                     for (let i = 0; i < pro_cat.length; i++) {
                         for (let j = 0; j < this.selectedCategories.length; j++) {
-                            if (pro_cat[i].category_id === this.selectedCategories[j]) {
+                            if (pro_cat[i].category_id === parseInt(this.selectedCategories[j])) {
                                 productIds.push(pro_cat[i].product_id);
                             }
                         }
                     }
+                    if (this.isBook()) {
+                        if (this.selectedGenres.length !== 0) 
+                        productIds = [];
+                        for (let i = 0; i < pro_gen.length; i++) {
+                            for (let j = 0; j < this.selectedGenres.length; j++) {
+                                if (pro_gen[i].genre_id === this.selectedGenres[j]) {
+                                    productIds.push(this.getProductId(pro_gen[i].book_id));
+                                }
+                            }
+                        }
+                    }
+
                     for (let i = 0; i < productIds.length; i++) {
                         for (let j = 0; j < this.products.length; j++) {
                             if (productIds[i] === this.products[j].id) {
@@ -212,9 +233,6 @@
                         }
                     }
                     return this.removeSame(this.removeMinimum(this.filterProducts(products,this.filter)));
-                }
-                else {
-                    return this.removeSame(this.removeMinimum(this.filterProducts(this.products,this.filter)));
                 }
             },
             getProductId(bookId){
@@ -280,21 +298,10 @@
                 return uniqueArray;
             },
             isBook(){
-                if (this.selectedCategories.length === 0){
-                    return parseInt(this.are_book);
-                }else{
-                    if(this.selectedCategories[0] === 1){
-                        return 1;
-                    }
-                }
+                return this.selectedCategories.includes("1") || this.selectedCategories.includes(1);
             }
         },
-        mounted() {
-            this.range = null;
-            this.max = this.getRange(this.products,'max');
-            this.min = this.getRange(this.products,'min');
 
-        }
     }
 </script>
 <style>

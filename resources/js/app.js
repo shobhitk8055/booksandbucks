@@ -34,6 +34,10 @@ Vue.component('avored-layout', require('../components/layout/Layout.vue').defaul
 Vue.component('login-fields', require('../components/auth/LoginFields.vue').default)
 Vue.component('register-fields', require('../components/auth/RegisterFields.vue').default)
 Vue.component('shop-page', require('../components/ShopPage.vue').default)
+Vue.component('search-bar', require('../components/SearchBar.vue').default)
+Vue.component('example', require('../components/Example.vue').default)
+Vue.component('offer-create', require('../components/OfferCreate.vue').default)
+
 
 Vue.component('avored-nav', require('../components/AvoRedNav.vue').default)
 

@@ -72,5 +72,4 @@ const app = new Vue({
     router: Router,
     i18n,
     store: Store,
-    //apolloProvider
 });

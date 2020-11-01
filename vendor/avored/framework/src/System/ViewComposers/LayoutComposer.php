@@ -33,12 +33,27 @@ class LayoutComposer
                 ]
             ]
         ];
+        $offers = (object) ['name'=>'Offers',
+            'icon'=>'wallet',
+            'url'=>'#',
+            'submenus'=> [
+                'all_offers'=>[
+                    'name'=>'All Offers',
+                    'url'=>'http:\/\/127.0.0.1:8000\admin\offers'
+                ],
+                'add_offer'=>[
+                    'name'=>'Add Offer',
+                    'url'=>'http:\/\/127.0.0.1:8000\admin\offer\create'
+                ]
+            ]
+        ];
         
         $adminMenus = Menu::adminMenus();
         // dd($adminMenus);
         $view->with('adminMenus', $adminMenus)
             ->with('currentOpenKey', $currentOpenKey)
             ->with('genres', $genres)
+            ->with('offers', $offers)
             ->with('currentMenuItemKey', $currentMenuItemKey);
     }
 }

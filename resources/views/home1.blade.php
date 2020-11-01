@@ -34,61 +34,61 @@
     }
 </style>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-4 col-lg-2 icon-column">
-            <p class="icon">
-                <i class="fas fa-book" ></i>
-            </p>
-            <p class="icon-text">
-                Best books {{ \Illuminate\Support\Facades\Session::get('modal') }}
-            </p>
-        </div>
-        <div class="col-4 col-lg-2 icon-column">
-            <p class="icon">
-                <i class="fas fa-truck"></i>
-            </p>
-            <p class="icon-text">
-                Best books
-            </p>
-        </div>
-        <div class="col-4 col-lg-2 icon-column">
-            <p class="icon">
-                <i class="fas fa-truck-loading"></i>
-            </p>
-            <p class="icon-text">
-                Best books
-            </p>
-        </div>
-        <div class="col-4 col-lg-2 to-hide icon-column">
-            <p class="icon">
-                <i class="fas fa-coins"></i>
-            </p>
-            <p class="icon-text">
-                Best books
-            </p>
-        </div>
-        <div class="col-4 col-lg-2 to-hide icon-column">
-            <p class="icon">
-                <i class="fas fa-chart-line"></i>
-            </p>
-            <p class="icon-text">
-                Best books
-            </p>
-        </div>
-        <div class="col-4 col-lg-2 to-hide icon-column">
-            <p class="icon">
-                <i class="fas fa-book" ></i>
-            </p>
-            <p class="icon-text">
-                Best books
-            </p>
-        </div>
+{{--<div class="container-fluid">--}}
+    {{--<div class="row">--}}
+        {{--<div class="col-4 col-lg-2 icon-column">--}}
+            {{--<p class="icon">--}}
+                {{--<i class="fas fa-book" ></i>--}}
+            {{--</p>--}}
+            {{--<p class="icon-text">--}}
+                {{--Best books {{ \Illuminate\Support\Facades\Session::get('modal') }}--}}
+            {{--</p>--}}
+        {{--</div>--}}
+        {{--<div class="col-4 col-lg-2 icon-column">--}}
+            {{--<p class="icon">--}}
+                {{--<i class="fas fa-truck"></i>--}}
+            {{--</p>--}}
+            {{--<p class="icon-text">--}}
+                {{--Best books--}}
+            {{--</p>--}}
+        {{--</div>--}}
+        {{--<div class="col-4 col-lg-2 icon-column">--}}
+            {{--<p class="icon">--}}
+                {{--<i class="fas fa-truck-loading"></i>--}}
+            {{--</p>--}}
+            {{--<p class="icon-text">--}}
+                {{--Best books--}}
+            {{--</p>--}}
+        {{--</div>--}}
+        {{--<div class="col-4 col-lg-2 to-hide icon-column">--}}
+            {{--<p class="icon">--}}
+                {{--<i class="fas fa-coins"></i>--}}
+            {{--</p>--}}
+            {{--<p class="icon-text">--}}
+                {{--Best books--}}
+            {{--</p>--}}
+        {{--</div>--}}
+        {{--<div class="col-4 col-lg-2 to-hide icon-column">--}}
+            {{--<p class="icon">--}}
+                {{--<i class="fas fa-chart-line"></i>--}}
+            {{--</p>--}}
+            {{--<p class="icon-text">--}}
+                {{--Best books--}}
+            {{--</p>--}}
+        {{--</div>--}}
+        {{--<div class="col-4 col-lg-2 to-hide icon-column">--}}
+            {{--<p class="icon">--}}
+                {{--<i class="fas fa-book" ></i>--}}
+            {{--</p>--}}
+            {{--<p class="icon-text">--}}
+                {{--Best books--}}
+            {{--</p>--}}
+        {{--</div>--}}
 
-    </div>
-</div>
+    {{--</div>--}}
+{{--</div>--}}
 <!-- Begin Main Content -->
-    <div class="popular-items">
+    <div class="popular-items" style="margin-top: 30px;">
         <div class="container">
             <!-- Section tittle -->
             <div class="row justify-content-center">
@@ -99,6 +99,15 @@
                     </div>
                 </div>
             </div>
+            @if(\Illuminate\Support\Facades\Session::get('message'))
+            <p class="alert
+                @if(\Illuminate\Support\Facades\Session::get('message') === "Not Enough Quantity Avaiable of this item")
+                    alert-danger
+                @else
+                    alert-success
+                @endif
+            ">{{\Illuminate\Support\Facades\Session::get('message')}}</p>
+            @endif
             <div class="row">
                 @foreach(\AvoRed\Framework\Database\Models\Product::all() as $product)
                     <div class="col-4 col-lg-2 col-md-3">
@@ -110,7 +119,7 @@
                                     <form  method="post" action="{{ route('add.to.cart') }}">
                                     @csrf
                                         <input type="hidden" name="slug" value="{{ $product->slug }}" />
-                                        <input type="hidden" name="modal" value="1" />
+                                        <input type="hidden" name="attributes" value="" />
                                     <input type="hidden" name="qty" value="1" />
                                     <button style="background-color: transparent; border: none;">
                                         Add to cart
